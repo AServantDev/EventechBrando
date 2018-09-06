@@ -1,0 +1,7 @@
+CREATE TABLE compte(
+id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+email VARCHAR(50),
+mot_de_passe VARCHAR(50),
+id_user INT,
+isPro BOOLEAN
+)

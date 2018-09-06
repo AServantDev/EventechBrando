@@ -14,7 +14,7 @@ public class User {
 	
 	
 	public User(int id_user, String nom, String prenom, int age, String job, String centreInteret, int id_event,
-			int id_entreprise) {
+		int id_entreprise) {
 		this.id_user = id_user;
 		this.nom = nom;
 		this.prenom = prenom;

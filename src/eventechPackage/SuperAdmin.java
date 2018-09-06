@@ -11,7 +11,6 @@ public class SuperAdmin {
 	
 	
 	public SuperAdmin(int id_superAdmin, String nom, String prenom, String compte, String motDePasse) {
-		super();
 		this.id_superAdmin = id_superAdmin;
 		this.nom = nom;
 		this.prenom = prenom;

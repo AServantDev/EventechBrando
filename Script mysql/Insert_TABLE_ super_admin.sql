@@ -1,0 +1,22 @@
+INSERT INTO `Eventech`.`super_admin`
+(`nom`,
+`prenom`,
+`compte`,
+`mot_de_passe`)
+VALUES
+('Argellies',
+'Mathilde',
+'MargelliesAdmin',
+'administrateur'),
+('Fourre',
+'Jean-Baptiste',
+'FJean-BaptisteAdmin',
+'administrateur'),
+('Thersiquel',
+'Greg',
+'TGregAdmin',
+'administrateur'),
+('Servant',
+'Arnaud',
+'SArnaudAdmin',
+'administrateur');

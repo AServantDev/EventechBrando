@@ -1,0 +1,7 @@
+CREATE TABLE super_admin(
+id_admin INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+nom VARCHAR(50),
+prenom VARCHAR(50),
+compte VARCHAR(50),
+mot_de_passe VARCHAR(50)
+)
