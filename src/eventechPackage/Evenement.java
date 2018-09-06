@@ -1,5 +1,6 @@
 package eventechPackage;
 
+import java.sql.Time;
 import java.util.Date;
 
 public class Evenement {
@@ -15,11 +16,14 @@ public class Evenement {
 	String theme;
 	int placeRestante;
 	int placeMax;
+	public Object parseInt;
+	Time heure;
+	String img;
 	
 	
 	
-	public Evenement(int id_event, String nom, int nbParticipant, boolean isCagnotte, int montantCagnotte, String lieu,
-			Date dateEvenement, String description, String theme, int placeRestante, int placeMax) {
+	
+	public Evenement() {
 		this.id_event = id_event;
 		this.nom = nom;
 		this.nbParticipant = nbParticipant;
@@ -31,8 +35,12 @@ public class Evenement {
 		this.theme = theme;
 		this.placeRestante = placeRestante;
 		this.placeMax = placeMax;
+		this.heure = heure;
+		this.img = img;
 	}
 	
+	
+
 	public int getId_event() {
 		return id_event;
 	}
@@ -91,13 +99,37 @@ public class Evenement {
 		return placeRestante;
 	}
 	public void setPlaceRestante(int placeRestante) {
-		this.placeRestante = placeRestante;
+		this.placeRestante = placeMax - nbParticipant;
 	}
 	public int getPlaceMax() {
 		return placeMax;
 	}
 	public void setPlaceMax(int placeMax) {
 		this.placeMax = placeMax;
+	}
+
+
+
+	public Time getHeure() {
+		return heure;
+	}
+
+
+
+	public void setHeure(Time heure) {
+		this.heure = heure;
+	}
+
+
+
+	public String getImg() {
+		return img;
+	}
+
+
+
+	public void setImg(String img) {
+		this.img = img;
 	}
 	
 	
