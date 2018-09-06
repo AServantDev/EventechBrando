@@ -4,7 +4,8 @@
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.List"%>
 <%@page import="java.util.Date"%>
-
+<%@page import="eventechPackage.DisplayHub"%>
+<%@page import="eventechPackage.DisplayHubMethod"%>
 <%@page import="eventechPackage.Evenement"%>
 <%@page import="eventechPackage.CreateConnection"%>
 <%@page import="java.sql.DriverManager"%>
@@ -18,13 +19,17 @@
 	ArrayList<Evenement> eventList = new ArrayList<Evenement>();
 	Connection con = null;
 	PreparedStatement preparedStatement = null;
+	
+	String search = null;
 
 	try {
 		Class.forName("com.mysql.jdbc.Driver");
+		
 
 		con = (Connection) CreateConnection.createConnection();
-		String sqlRequete = "SELECT * FROM evenement";
-
+		search = request.getParameter("SearchName");
+		String sqlRequete = "SELECT * FROM evenement WHERE nom LIKE '%" + search + "%'";
+		
 		Statement st = (Statement) con.createStatement();
 		ResultSet result = (ResultSet) st.executeQuery(sqlRequete);
 
@@ -66,41 +71,57 @@
 <body>
 
 	<%
-		out.print("<div class=\"container\">");
-		
+		out.print("<div id=\"container\" class=\"container bg-white\">");
+	
+	out.print("<div class=\"row\">");
+
+		out.print("<form action=\"HubEvent.jsp\" class=\"form-inline mr-5 col-sm \">");
+		out.print(
+				"<input name=\"SearchName\" class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"Rechercher un évenement\" aria-label=\"SearchName\">");
+		out.print("<button class=\"btn btn-outline-danger my-2 my-sm-0\" type=\"submit\">Search</button>");
+		out.print("</form>");
+
+		out.print("<form class=\"form-inline mr-5 col-sm \">");
+		out.print(
+				"<input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"Rechercher par date\" aria-label=\"Search\">");
+		out.print("<button class=\"btn btn-outline-danger my-2 my-sm-0\" type=\"submit\">Search</button>");
+		out.print("</form>");
+
+		out.print("<form class=\"form-inline mr-5 col-sm \">");
+		out.print(
+				"<input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"Rechercher par lieu\" aria-label=\"Search\">");
+		out.print("<button class=\"btn btn-outline-danger my-2 my-sm-0\" type=\"submit\">Search</button>");
+		out.print("</form>");
+		out.print("</div>");
+
 		out.print("<div class=\"row\">");
-		
-		
+
 		for (int i = 0; i < eventList.size(); i++) {
-			
-			
+
 			out.print("<div class=\"col-sm\">");
-			
 
 			out.print("<div class=\"card\" style=\"width: 250px\">");
-			
-			out.print("<a href=pageType.jsp><img class=\"card-img-top\" style=\"height: 300px\" src=\"" + eventList.get(i).getImg()
-					+ "\"alt=\"Card image cap\"></a>");
-			
-			
+
+			out.print("<a href=pageType.jsp><img class=\"card-img-top\" style=\"height: 300px\" src=\""
+					+ eventList.get(i).getImg() + "\"alt=\"Card image cap\"></a>");
+
 			out.print("<div class=\"card-body\">");
-			
+
 			out.print("<h6 class=\"card-title\"><strong>" + eventList.get(i).getNom() + "</strong></h6>");
-			
+
 			out.print("<p class=\"card-text\">" + eventList.get(i).getTheme() + "</p>");
-			
+
 			out.print("<a href=\"pageType.jsp\" class=\"btn btn-outline-danger\">Plus d'infos!</a>");
-			
+
 			out.print("</div>");
 
 			out.print("</div>");
 			out.print("</div>");
-			
+
 		}
-		
-		
+
 		out.print("</div>");
-		
+
 		out.print("</div>");
 		out.print("<a href=register.jsp>Créer un evénement </a>");
 	%>
