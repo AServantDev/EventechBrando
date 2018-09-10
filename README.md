@@ -24,7 +24,6 @@ Si besoin de supprimer la branche :
 ```shell
 git checkout - d
 ```
-
 On poursuit ensuite avec la procédure habituelle ensuite pour pusher du contenu sur le repository.
 =======
 
