@@ -4,8 +4,6 @@
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.List"%>
 <%@page import="java.util.Date"%>
-<%@page import="eventechPackage.DisplayHub"%>
-<%@page import="eventechPackage.DisplayHubMethod"%>
 <%@page import="eventechPackage.Evenement"%>
 <%@page import="eventechPackage.CreateConnection"%>
 <%@page import="java.sql.DriverManager"%>
@@ -23,12 +21,13 @@
 	String search = null;
 
 	try {
+		search = "";
 		Class.forName("com.mysql.jdbc.Driver");
 		
 
 		con = (Connection) CreateConnection.createConnection();
 		search = request.getParameter("SearchName");
-		String sqlRequete = "SELECT * FROM evenement WHERE nom LIKE '%" + search + "%'";
+		String sqlRequete = "SELECT * FROM evenement WHERE nom LIKE '%" + search + "%' OR evenement.theme LIKE '%" + search + "%'";
 		
 		Statement st = (Statement) con.createStatement();
 		ResultSet result = (ResultSet) st.executeQuery(sqlRequete);
