@@ -4,8 +4,7 @@
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.List"%>
 <%@page import="java.util.Date"%>
-<%@page import="eventechPackage.DisplayHub"%>
-<%@page import="eventechPackage.DisplayHubMethod"%>
+
 <%@page import="eventechPackage.Evenement"%>
 <%@page import="eventechPackage.CreateConnection"%>
 <%@page import="java.sql.DriverManager"%>
