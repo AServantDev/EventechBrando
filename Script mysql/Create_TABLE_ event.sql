@@ -9,7 +9,10 @@ date_evenement DATE,
 description VARCHAR(600),
 theme VARCHAR(50),
 place_restante INT,
-hote INT,
-place_max INT,
-heure_debut TIME
+place_max INTEGER,
+id_organisateur INT,
+isPublic BOOLEAN,
+id_entreprise INT,
+heure_debut TIME,
+img VARCHAR(2000)
 )
