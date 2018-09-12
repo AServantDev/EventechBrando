@@ -13,7 +13,7 @@
 	<center>
 		<div class="container rounded">
 
-			<form action="" style="width: 500px; margin: auto;">
+			<form action="RegisterUser.java" style="width: 500px; margin: auto;">
 
 
 				<div class="row">
