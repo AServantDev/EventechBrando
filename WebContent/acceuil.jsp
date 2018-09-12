@@ -16,16 +16,17 @@
 
 	<jsp:include page="header.html"></jsp:include>
 
-	<div id ="carouselWrap">
+	<div id="carouselWrap">
 		<div id="carouselExampleControls" class="carousel slide"
 			data-ride="carousel">
 
 			<!-- buttons -->
 			<ol class="carousel-indicators">
-				<button type="button" id="buttonSlide" class="btn btn-secondary">Liste
-					des événements</button>
-				<button type="button" id="buttonSlide" class="btn btn-light">Créer
-					un événement</button>
+				<a href="HubEvent.jsp" type="button" id="buttonSlide"
+					class="btn btn-secondary">Liste des événements</a>
+				<a href="register.jsp" type="button" id="buttonSlide"
+					class="btn btn-light">Créer un événement</a>
+
 			</ol>
 
 			<!-- Wrapper for slides -->
@@ -47,7 +48,6 @@
 
 		</div>
 	</div>
-
 
 	<!-- Left and right controls -->
 	<a class="carousel-control-prev" href="#carouselExampleControls"
@@ -104,7 +104,6 @@
 
 	<div id="listeEvents" class="container">
 
-
 		<div class="row">
 
 			<div class="col">
@@ -130,8 +129,6 @@
 		</div>
 
 	</div>
-	
-	
 
 	<jsp:include page="footer.html"></jsp:include>
 
