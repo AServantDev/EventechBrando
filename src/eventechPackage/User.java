@@ -6,21 +6,26 @@ public class User {
 	String nom;
 	String prenom;
 	int age;
-	String job;
 	String centreInteret;
+	String email;
+	String password;
+	boolean isPro;
 	int id_event;
 	int id_entreprise;
 	
 	
 	
-	public User(int id_user, String nom, String prenom, int age, String job, String centreInteret, int id_event,
-			int id_entreprise) {
+	public User(int id_user, String nom, String prenom, int age, String centreInteret, String email, String password,
+			boolean isPro, int id_event, int id_entreprise) {
+		super();
 		this.id_user = id_user;
 		this.nom = nom;
 		this.prenom = prenom;
 		this.age = age;
-		this.job = job;
 		this.centreInteret = centreInteret;
+		this.email = email;
+		this.password = password;
+		this.isPro = isPro;
 		this.id_event = id_event;
 		this.id_entreprise = id_entreprise;
 	}
@@ -48,17 +53,29 @@ public class User {
 	public void setAge(int age) {
 		this.age = age;
 	}
-	public String getJob() {
-		return job;
-	}
-	public void setJob(String job) {
-		this.job = job;
-	}
 	public String getCentreInteret() {
 		return centreInteret;
 	}
 	public void setCentreInteret(String centreInteret) {
 		this.centreInteret = centreInteret;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public boolean isPro() {
+		return isPro;
+	}
+	public void setPro(boolean isPro) {
+		this.isPro = isPro;
 	}
 	public int getId_event() {
 		return id_event;
@@ -72,6 +89,9 @@ public class User {
 	public void setId_entreprise(int id_entreprise) {
 		this.id_entreprise = id_entreprise;
 	}
+	
+	
+	
 	
 	
 	
