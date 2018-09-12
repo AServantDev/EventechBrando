@@ -4,13 +4,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
- <link rel="stylesheet" href="bootstrap.css">
+<link href="greg.css" rel="stylesheet" type="text/css">
 <title>Page de Connexion</title>
 </head>
 <body>
 	<jsp:include page="header.html"></jsp:include>
 	
-	<img id="BannerConnexion" src="images/bannerPic1.jpeg">
+	
 	<center>
         <div class="container rounded">
             
