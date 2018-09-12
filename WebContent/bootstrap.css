@@ -14,6 +14,7 @@ ajout de styles additionnels - Mathilde
   background-color: rgba(75, 99, 139, 0.3);
   margin-right:0rem;
   margin-left:0rem;
+  margin-top:3rem;
   width: 100%;
   padding-right: 50px;
   padding-left: 50px;
@@ -39,6 +40,26 @@ ajout de styles additionnels - Mathilde
 #headerFooter {
 font-weight: bolder;
 font-size: 1.1rem;
+}
+
+#buttonSlide{
+margin: 10px;
+}
+
+.titre{
+font-size: 3rem;
+font-family: Roboto;
+}
+
+#listeEvents{
+margin-top: 3rem;
+}
+
+.sousTitre{
+    text-align: center;
+    margin-top: 15px;
+}
+
 }
 
 /*!

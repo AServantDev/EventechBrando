@@ -10,6 +10,6 @@
     <url-pattern>/Register</url-pattern>
   </servlet-mapping>
   <welcome-file-list>
-    <welcome-file>HubEvent.jsp</welcome-file>
+    <welcome-file>accueil.jsp</welcome-file>
   </welcome-file-list>
 </web-app>

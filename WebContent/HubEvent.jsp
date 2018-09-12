@@ -25,7 +25,7 @@
 		Class.forName("com.mysql.jdbc.Driver");
 		
 
-		con = (Connection) CreateConnection.createConnection();
+		con =  CreateConnection.createConnection();
 		search = request.getParameter("SearchName");
 		String sqlRequete = "SELECT * FROM evenement WHERE nom LIKE '%" + search + "%' OR evenement.theme LIKE '%" + search + "%'";
 		
@@ -64,7 +64,7 @@
 	href="bootstrap.css"
 	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
 	crossorigin="anonymous">
-<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="bootstrap.css">
 <title>Hub evenement</title>
 </head>
 <body>
