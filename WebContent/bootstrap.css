@@ -14,7 +14,7 @@ ajout de styles additionnels - Mathilde
   background-color: rgba(75, 99, 139, 0.3);
   margin-right:0rem;
   margin-left:0rem;
-  margin-top:3rem;
+  margin-top:2rem;
   width: 100%;
   padding-right: 50px;
   padding-left: 50px;
@@ -60,21 +60,19 @@ margin-top: 3rem;
     margin-top: 15px;
 }
 
+#carouselWrap{
+	margin-top: 1rem; 
 }
 
 
-/*Changement JB*/
+/*Changement Jean-Baptiste*/
 
-.police-header {
+.wrap-header {
    font-family: Roboto;
-   font-size: 25px;
-   font-weight: bold;
+   font-size: 0.7 rem;
    text-align: center;
+   vertical-align: middle;
    
- }
-
- .container-fluid {
-   margin: 2vh;
  }
 
  #image-logo {
@@ -105,15 +103,6 @@ margin-top: 3rem;
 .row div a {
   color: #7f4b8b;
 }
-
-.toto {
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 30px;
-}
-
 
 
 
@@ -2760,16 +2749,16 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-primary {
-  color: #e91790, opacity: 0.33;
+  color: #fff, opacity: 0.33;
   background-color: transparent;
   background-image: none;
-  border-color: #e91790;
+  border-color: #7f4b8b;
 }
 
 .btn-outline-primary:hover {
   color: #fff;
-  background-color: #007bff;
-  border-color: #007bff;
+  background-color: #7f4b8b;
+  border-color: #7f4b8b;
 }
 
 .btn-outline-primary:focus, .btn-outline-primary.focus {
