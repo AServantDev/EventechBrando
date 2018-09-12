@@ -19,7 +19,7 @@
 				<div class="row">
 					<div class="col">
 
-						<input id="focusInscription" type="text" name="prenom"
+						<input id="focusInscription" type="text" name="nom"
 							class="form-control" placeholder="Nom *">
 
 
@@ -28,7 +28,7 @@
 					<div class="col">
 						<div class="col">
 
-							<input id="focusInscription" type="text" name="nom" class="form-control"
+							<input id="focusInscription" type="text" name="prenom" class="form-control"
 								placeholder="Prénom *">
 						</div>
 					</div>
