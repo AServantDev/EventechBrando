@@ -10,7 +10,7 @@ git clone : lien du repository
 On vérifie que l'on est bien sur la branche develop.
 
  ```shell
-git status
+git branch
   ```
 
 On crée une branche Feature 1.
@@ -21,3 +21,12 @@ git checkout - b Feature/Feature1
 
 Si besoin de supprimer la branche :
 
+  ```shell
+git branch -d
+   ```
+   
+Pour mettre à jour le repository en local à partir de la branche develop :
+
+  ```shell
+git pull origin develop
+   ```
