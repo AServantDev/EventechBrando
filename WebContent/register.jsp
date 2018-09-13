@@ -10,17 +10,12 @@
 </head>
 <body>
 
-<HR>
+<jsp:include page="header.html"></jsp:include>
 
-<H1>INSCRIVEZ VOUS!!!</H1>
 
 <H2>Création d'évenement</H2>
 
-Send me mail at <a href="mailto:arnaud.github@gmail.com">
 
-arnaud.github@gmail.com</a>.
-
-<P> Rentrez vos informations!
 
    <form action="CreateEvent" method="post" onsubmit="return validate()">
     
@@ -40,10 +35,7 @@ arnaud.github@gmail.com</a>.
 
   <HR>
            
-            
-           
-            
-             <HR>
+            <jsp:include page="footer.html"></jsp:include>
 
 
 
