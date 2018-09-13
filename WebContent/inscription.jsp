@@ -61,7 +61,7 @@
 					<div class="col">
 						<p>* Champs obligatoires.</p>
 						
-						<div>Déja inscrit?<a href="connection.jsp">Se connecter</a></div><br>
+						<div>Déja inscrit?<a href="connection.jsp"> Se connecter</a></div><br>
 						<input id="inscriptionBtn" class="btn btn-outline-danger" type="submit"
 							value="Valider">
 					</div>

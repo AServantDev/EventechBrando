@@ -15,7 +15,7 @@
 		<div class="container rounded">
 			<h2 id ="Connect">Connectez vous</h2><br>
 
-			<form action="" style="width: 500px; margin: auto;">
+			<form action="ConnectUser" style="width: 500px; margin: auto;">
 
 
 				<div class="row">
@@ -23,14 +23,14 @@
 					<div class="col">
 					
 
-						<input id="formCt" type="text" name="mail" class="form-control"
+						<input id="formCt" type="text" name="mailCo" class="form-control"
 							placeholder="Email *">
 
 
 					</div>
 					<div class="col">
 
-						<input id="formCt" type="password" name="password"
+						<input id="formCt" type="password" name="passwordCo"
 							class="form-control" placeholder="Mot de passe *">
 					</div>
 				</div>
