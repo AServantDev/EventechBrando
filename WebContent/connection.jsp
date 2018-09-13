@@ -9,40 +9,47 @@
 </head>
 <body>
 	<jsp:include page="header.html"></jsp:include>
-	
-	
+
+
 	<center>
-        <div class="container rounded">
-            
-                <form  action="" style="width: 500px; margin: auto;">
-                        
-                               
-                        <div class="row">
-                            <div class="col">
-                                    
-                                    <input id="formCt"  type="text" name="mail" class="form-control" placeholder="Email *">
-                                    
-                                   
-                            </div>
-                                <div class="col">
-                                         
-                                        <input  id="formCt" type="password" name="password" class="form-control" placeholder="Mot de passe *">     
-                                </div>
-                            </div>
-                        </div>
-                      
-                            <div class="row">
-                                    <div class="col">
-                                            
-                                        <input id="connectBtn"  class="btn btn-outline-danger" type="submit" value="Valider">
-                                </div>
-                                  </div>
-                                
-                                    
-                </form>
-        </div>
-    </center>
-	
+		<div class="container rounded">
+			<h2 id ="Connect">Connectez vous</h2><br>
+
+			<form action="" style="width: 500px; margin: auto;">
+
+
+				<div class="row">
+				
+					<div class="col">
+					
+
+						<input id="formCt" type="text" name="mail" class="form-control"
+							placeholder="Email *">
+
+
+					</div>
+					<div class="col">
+
+						<input id="formCt" type="password" name="password"
+							class="form-control" placeholder="Mot de passe *">
+					</div>
+				</div>
+		</div>
+
+		<div class="row">
+			<div class="col">
+			<div>Pas encore inscrit? <a href="inscription.jsp">C'est par ici!</a></div><br>
+
+				<input id="connectBtn" class="btn btn-outline-danger" type="submit"
+					value="Valider">
+			</div>
+		</div>
+
+
+		</form>
+		</div>
+	</center>
+
 
 
 

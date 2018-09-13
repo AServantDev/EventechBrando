@@ -5,6 +5,10 @@
 	font-family: 'Roboto', sans-serif;
 }
 
+#Connect, #Inscrit{
+	color: #7f4b8b;
+}
+
 .col.align-self-start {
 	padding-right: 65%;
 	margin-left: 75px;

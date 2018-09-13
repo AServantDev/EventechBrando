@@ -15,8 +15,9 @@
 
 	<center>
 		<div class="container rounded">
+		<h2 id ="Inscrit">S'inscrire</h2><br>
 
-			<form action="RegisterUser.java" style="width: 500px; margin: auto;">
+			<form action="RegisterUser" style="width: 500px; margin: auto;">
 
 
 				<div class="row">
@@ -59,6 +60,8 @@
 				<div class="row">
 					<div class="col">
 						<p>* Champs obligatoires.</p>
+						
+						<div>Déja inscrit?<a href="connection.jsp">Se connecter</a></div><br>
 						<input id="inscriptionBtn" class="btn btn-outline-danger" type="submit"
 							value="Valider">
 					</div>
