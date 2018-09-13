@@ -114,7 +114,53 @@ margin-top: 3rem;
   padding-bottom: 30px;
 }
 
+/*Style de Greg*/
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
+#htmlGreg, #bodyGreg {
+	background-color: white;
+	font-family: 'Roboto', sans-serif;
+}
+
+.col.align-self-start {
+	padding-right: 65%;
+	margin-left: 75px;
+}
+
+.container.rounded {
+	margin-top: 75px;
+	width: 50%;
+}
+
+.col {
+	margin-bottom: 25px;
+}
+
+#imgHeader {
+	width: 100%;
+	height: 300px;
+}
+
+#focusInscription:focus {
+	color: #7f4b8b;
+	background-color: #fff;
+	border-color: #4b638b;
+	outline: 0;
+	box-shadow: 0 0 0 0.2rem #7f4b8b;
+}
+
+#inscriptionBtn {
+	color: #7f4b8b;
+	background-color: transparent;
+	background-image: none;
+	border-color: #7f4b8b;
+}
+
+#inscriptionBtn:hover {
+	color: #fff;
+	background-color: #7f4b8b;
+	border-color: #7f4b8b;
+}
 
 
 /*!

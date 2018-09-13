@@ -23,6 +23,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.mysql.jdbc.Connection;
 
 import eventechPackage.Evenement;
+import eventechPackage.UserController;
 import sun.rmi.runtime.Log;
 
 @WebServlet("/CreateEvent")
@@ -58,7 +59,7 @@ public class CreateEvent extends HttpServlet {
 		
 		 Evenement event = new Evenement();
 		
-		String nom = request.getParameter("nom");
+		String Eventnom = request.getParameter("Eventnom");
 	    String lieu = request.getParameter("lieu");
 	    
 	  //date
@@ -98,21 +99,16 @@ public class CreateEvent extends HttpServlet {
 	    int places = Integer.parseInt(place);
 	    
 	    
-	    event.setNom(nom);
+	    event.setNom(Eventnom);
 	    event.setLieu(lieu);
 	    
 	    event.setDescription(desc);
 	    event.setTheme(theme);
 	    event.setPlaceMax(places);
 	    event.setImg(image);
-	   
-	    
-	    
-	    
-	    
-	    
+	   	    
 	 
-	    RegisterEvent registerEvent = new RegisterEvent();
+	   EventController registerEvent = new EventController();
 	    
 	    //The core Logic of the Registration application is present here. We are going to insert user data in to the database.
 	    String eventRegistered = registerEvent.registerEvent(event);

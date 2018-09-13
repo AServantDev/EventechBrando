@@ -15,9 +15,8 @@ public class User {
 	
 	
 	
-	public User(int id_user, String nom, String prenom, int age, String centreInteret, String email, String password,
-			boolean isPro, int id_event, int id_entreprise) {
-		super();
+	public User() {
+	
 		this.id_user = id_user;
 		this.nom = nom;
 		this.prenom = prenom;

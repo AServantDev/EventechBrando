@@ -10,11 +10,13 @@
 </head>
 <body>
 
+<jsp:include page="header.html"></jsp:include>
+
 <HR>
 
-<H1>INSCRIVEZ VOUS!!!</H1>
+<H2>INSCRIVEZ VOUS!!!</H2>
 
-<H2>Création d'évenement</H2>
+<H3>Création d'évenement</H3>
 
 Send me mail at <a href="mailto:arnaud.github@gmail.com">
 
@@ -24,7 +26,7 @@ arnaud.github@gmail.com</a>.
 
    <form action="CreateEvent" method="post" onsubmit="return validate()">
     
-    	<table><tr> <td>Nom:</td><td><input type="text" name="nom"></td></tr>
+    	<table><tr> <td>Nom:</td><td><input type="text" name="Eventnom"></td></tr>
 		<tr> <td>Lieu:</td><td><input type="text" name="lieu"></td></tr>
 		<tr> <td>Date:</td><td><input type="date" name="date"></td></tr>
 		<tr> <td>Heure de début:</td><td><input type="time" name="heure"></td></tr>
@@ -40,10 +42,13 @@ arnaud.github@gmail.com</a>.
 
   <HR>
            
+           
             
            
             
              <HR>
+             
+             <jsp:include page="footer.html"></jsp:include>
 
 
 

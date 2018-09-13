@@ -8,11 +8,11 @@ import java.sql.*;
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.*;
 
-public class RegisterEvent {
+public class EventController {
 
 	public String registerEvent(Evenement event) {
 
-		String nom = event.getNom();
+		String Eventnom = event.getNom();
 		String lieu = event.getLieu();
 		Date date = event.getDateEvenement();
 		String desc = event.getDescription();
@@ -36,7 +36,7 @@ public class RegisterEvent {
 			preparedStatement = con.prepareStatement(query); // Making use of prepared statements here to insert bunch
 																// of data
 
-			preparedStatement.setString(1, nom);
+			preparedStatement.setString(1, Eventnom);
 			preparedStatement.setString(2, lieu);
 			preparedStatement.setDate(3, (java.sql.Date) date);
 			preparedStatement.setString(4, desc);

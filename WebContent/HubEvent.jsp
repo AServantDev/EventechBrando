@@ -64,10 +64,12 @@
 	href="bootstrap.css"
 	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
 	crossorigin="anonymous">
-<link rel="stylesheet" href="bootstrap.css">
+
 <title>Hub evenement</title>
 </head>
 <body>
+
+<jsp:include page="header.html"></jsp:include>
 
 	<%
 		out.print("<div id=\"container\" class=\"container bg-white\">");
@@ -126,7 +128,7 @@
 	%>
 
 
-
+<jsp:include page="footer.html"></jsp:include>
 
 
 </body>
