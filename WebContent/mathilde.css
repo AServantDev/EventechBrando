@@ -11,19 +11,19 @@
 
 .pieddepage {
 	background-color: rgba(75, 99, 139, 0.3);
-	margin-right: 0rem;
-	margin-left: 0rem;
-	margin-top: 2rem;
+	margin-top: 5rem;
 	width: 100%;
-	padding-right: 50px;
-	padding-left: 50px;
-	padding-top: 20px;
-	padding-bottom: 20px;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	font-size : 14px; 
+	color : #7f4b8b; 
 }
 
 .lastnav {
 	margin-top: 5rem;
 }
+
+/* Installation police Roboto */
 
 @font-face {
 	font-family: 'Roboto';
@@ -35,8 +35,10 @@
 }
 
 #headerFooter {
-	font-weight: bolder;
+	font-weight: bold;
 	font-size: 1.1rem;
+	margin-bottom : 10px; 
+	color : #343a40;
 }
 
 #buttonSlide {
@@ -54,22 +56,40 @@
 
 .sousTitre {
 	text-align: center;
-	margin-top: 15px;
+	margin-top: 30px;
 }
 
 #carouselWrap {
 	margin-top: 1rem;
 }
 
-#footerLogo {
-	text-align: center;
-	font-size: 0.8rem;
-	justify-content: center;
 
+/* Zoom */
 
+.hovereffect {
+width:100%;
+height:100%;
+overflow:hidden;
+position:relative;
 }
 
-/* ----------------------------------Styles de Jean Baptiste */
+/* Délai de zoom */
+.hovereffect img {
+display:block;
+position:relative;
+-webkit-transition:all .3s linear;
+transition:all .3s linear;
+}
+
+.hovereffect:hover img {
+-ms-transform:scale(1.1);
+-webkit-transform:scale(1.1);
+transform:scale(1.1);
+}
+
+
+/* ----------------------------------Styles de Jean-Baptiste */
+
 .wrap-header {
 	font-family: Roboto;
 	font-size: 0.7 rem;
@@ -5907,6 +5927,7 @@ button.close {
 	backface-visibility: hidden;
 	-webkit-perspective: 1000px;
 	perspective: 1000px;
+	height: 30rem;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {

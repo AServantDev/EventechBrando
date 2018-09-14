@@ -6,7 +6,6 @@
 <%@page import="java.util.Date"%>
 <%@page import="eventechPackage.Evenement"%>
 <%@page import="eventechPackage.CreateConnection"%>
-<%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.ResultSetMetaData"%>
 <%@page import="java.sql.ResultSet"%>
@@ -14,7 +13,7 @@
 <%@page import="java.sql.*"%>
 
 <%
-	ArrayList<Evenement> eventList = new ArrayList<Evenement>();
+	ArrayList <Evenement> eventList = new ArrayList<Evenement>();
 	Connection con = null;
 	PreparedStatement preparedStatement = null;
 	
