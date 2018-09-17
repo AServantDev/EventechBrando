@@ -32,17 +32,16 @@
 			<!-- Wrapper for slides -->
 			<div class="carousel-inner">
 				<div class="carousel-item active">
-					<img class="d-block w-100" src="images/randonnee.png"
+					<img class="d-block w-100" src="images/formation.png"
 						alt="First slide">
 
 				</div>
 				<div class="carousel-item">
-					<img class="d-block w-100" src="images/mer.png" alt="Second slide">
+					<img class="d-block w-100" src="images/art.png" alt="Second slide">
 
 				</div>
 				<div class="carousel-item">
-					<img class="d-block w-100" src="images/hackathon.png"
-						alt="Third slide">
+					<img class="d-block w-100" src="images/code.png" alt="Third slide">
 				</div>
 			</div>
 
@@ -78,67 +77,96 @@
 
 		<div class="row">
 
+			<!-- Premiere vignette -->
+
 			<div class="col">
-				<img class="d-block w-100" src="images/randonnee.png"
-					alt="First slide">
-
-				<h5 class="sousTitre">Nature et aventure</h5>
-
+				<div class="hovereffect">
+					<a href="register.jsp"> <img
+						class="img-responsive d-block w-100" src="images/code.png" alt="">
+					</a>
+					<h5 class="sousTitre">Hackathons</h5>
+				</div>
 			</div>
-			<div class="col">
-				<img class="d-block w-100" src="images/hackathon.png"
-					alt="Third slide">
-				<h5 class="sousTitre">Technologies</h5>
 
+
+			<!-- Deuxième vignette -->
+
+			<div class="col">
+				<div class="hovereffect">
+					<a href="register.jsp"> <img
+						class="img-responsive d-block w-100"
+						src="images/conferences-2.png" alt="">
+					</a>
+					<h5 class="sousTitre">Conférences</h5>
+				</div>
 			</div>
+
+
+
+			<!-- Troisième vignette -->
+
+
+
 			<div class="col">
-				<img class="d-block w-100" src="images/mer.png" alt="Second slide">
+				<div class="hovereffect">
+					<a href="register.jsp"> <img
+						class="img-responsive d-block w-100" src="images/art.png" alt="">
+					</a>
+					<h5 class="sousTitre">Arts numériques</h5>
+				</div>
+			</div>
 
-				<h5 class="sousTitre">Voyages</h5>
 
+		</div>
+		</div>
+
+		<div id="listeEvents" class="container">
+
+			<div class="row">
+
+
+				<div class="col">
+					<div class="hovereffect">
+						<a href="register.jsp"> <img
+							class="img-responsive d-block w-100" src="images/gaming.png"
+							alt="">
+						</a>
+						<h5 class="sousTitre">Gaming</h5>
+					</div>
+				</div>
+
+				<div class="col">
+					<div class="hovereffect">
+						<a href="register.jsp"> <img
+							class="img-responsive d-block w-100" src="images/ecology.png"
+							alt="">
+						</a>
+						<h5 class="sousTitre">Numérique et écologie</h5>
+					</div>
+				</div>
+
+
+				<div class="col">
+					<div class="hovereffect">
+						<a href="register.jsp"> <img
+							class="img-responsive d-block w-100" src="images/formation.png"
+							alt="">
+						</a>
+						<h5 class="sousTitre">Formation</h5>
+					</div>
+				</div>
 			</div>
 		</div>
 
 
-	</div>
-
-	<div id="listeEvents" class="container">
-
-		<div class="row">
-
-			<div class="col">
-				<img class="d-block w-100" src="images/conferences.png"
-					alt="First slide">
-
-				<h5 class="sousTitre">Conférences</h5>
-
-			</div>
-			<div class="col">
-				<img class="d-block w-100" src="images/dejeuner.png"
-					alt="Third slide">
-				<h5 class="sousTitre">Fooding</h5>
-
-			</div>
-			<div class="col">
-				<img class="d-block w-100" src="images/sciences.png"
-					alt="Second slide">
-
-				<h5 class="sousTitre">Sciences</h5>
-
-			</div>
-		</div>
-
-	</div>
-
-	<jsp:include page="footer.html"></jsp:include>
+		<jsp:include page="footer.html"></jsp:include>
 
 
-	<!-- Liens vers jQuery et bootstrap.js pour création du carroussel -->
+		<!-- Liens vers jQuery et bootstrap.js pour création du carroussel -->
 
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
-		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-		crossorigin="anonymous"></script>
-	<script type="text/javascript" src="bootstrap.js"></script>
-
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+			integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			crossorigin="anonymous"></script>
+		<script type="text/javascript" src="bootstrap.js"></script>
 </body>
 </html>
