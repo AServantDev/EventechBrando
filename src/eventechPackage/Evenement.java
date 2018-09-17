@@ -21,6 +21,7 @@ public class Evenement {
 	String img;
 	int id_organisateur;
 	int id_entreprise;
+	String descriptionBreve;
 	
 	
 	
@@ -64,6 +65,8 @@ public class Evenement {
 		this.img = img;
 		this.id_organisateur = id_organisateur;
 		this.id_entreprise = id_entreprise;
+		this.descriptionBreve = descriptionBreve;
+		
 	}
 
 	public int getId_event() {
@@ -156,6 +159,14 @@ public class Evenement {
 	}
 	public void setId_entreprise(int id_entreprise) {
 		this.id_entreprise = id_entreprise;
+	}
+
+	public String getDescriptionBreve() {
+		return descriptionBreve;
+	}
+
+	public void setDescriptionBreve(String descriptionBreve) {
+		this.descriptionBreve = descriptionBreve;
 	}
 	
 }

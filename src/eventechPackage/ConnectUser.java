@@ -48,7 +48,7 @@ public class ConnectUser extends HttpServlet {
 
 		if (connectRegistered.equals("SUCCESS")) // On success, you can display a message to user on Home page
 		{
-			request.getRequestDispatcher("/Home.jsp").forward(request, response);
+			request.getRequestDispatcher("/accueil.jsp").forward(request, response);
 			
 
 		} else // On Failure, display a meaningful message to the User.
@@ -81,7 +81,8 @@ public class ConnectUser extends HttpServlet {
 
 		if (connectRegistered.equals("SUCCESS")) // On success, you can display a message to user on Home page
 		{
-			request.getRequestDispatcher("/Home.jsp").forward(request, response);
+			session.setAttribute("isConnected", true);
+			request.getRequestDispatcher("/accueil.jsp").forward(request, response);
 			
 
 		} else // On Failure, display a meaningful message to the User.
