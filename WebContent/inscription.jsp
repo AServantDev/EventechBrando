@@ -9,7 +9,7 @@
 </head>
 <body id="bodyGreg">
 
-<jsp:include page="header.html"></jsp:include>
+<jsp:include page="header.jsp"></jsp:include>
 
 	
 
@@ -24,7 +24,7 @@
 					<div class="col">
 
 						<input id="focusInscription" type="text" name="nom"
-							class="form-control" placeholder="Nom *">
+							class="form-control" placeholder="Nom *" class="validity" required>
 
 
 					</div>
@@ -33,7 +33,7 @@
 						<div class="col">
 
 							<input id="focusInscription" type="text" name="prenom" class="form-control"
-								placeholder="Prénom *">
+								placeholder="Prénom *" class="validity" required>
 						</div>
 					</div>
 				</div>
@@ -42,13 +42,14 @@
 					<div class="col">
 
 						<input id="focusInscription" type="text" name="mail" class="form-control"
-							placeholder="Email *">
+							placeholder="Email *" required >
 					</div>
 
 					<div class="col">
 
 						<input id="focusInscription" type="password" name="password" class="form-control"
-							placeholder="Mot de passe *">
+							placeholder="Mot de passe *" required
+               minlength="5" maxlength="15" >
 					</div>
 				</div>
 				<div class="row">

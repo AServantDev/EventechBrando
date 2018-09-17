@@ -19,8 +19,10 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.mysql.jdbc.Connection;
+import eventechPackage.*;
 
 import eventechPackage.Evenement;
 import sun.rmi.runtime.Log;
@@ -55,7 +57,9 @@ public class CreateEvent extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+
 		
+		HttpSession session = request.getSession();
 		 Evenement event = new Evenement();
 		
 		String nom = request.getParameter("nom");
@@ -74,7 +78,8 @@ public class CreateEvent extends HttpServlet {
 	    String place= request.getParameter("placeMax");
 	    String heure = request.getParameter("heure");
 	    String image = request.getParameter("imageEvent");
-		
+	    String rapDesc = request.getParameter("descriptionBreve");
+		int id = (int) session.getAttribute("idCo");
 	    
 	    try {
 
@@ -105,6 +110,9 @@ public class CreateEvent extends HttpServlet {
 	    event.setTheme(theme);
 	    event.setPlaceMax(places);
 	    event.setImg(image);
+	    event.setId_organisateur(id);
+	    event.setDescriptionBreve(rapDesc);
+	   
 	   
 	    
 	    
@@ -115,7 +123,7 @@ public class CreateEvent extends HttpServlet {
 	    RegisterEvent registerEvent = new RegisterEvent();
 	    
 	    //The core Logic of the Registration application is present here. We are going to insert user data in to the database.
-	    String eventRegistered = registerEvent.registerEvent(event);
+	    String eventRegistered = registerEvent.registerEvent(event, session);
 	    
 	    if(eventRegistered.equals("SUCCESS"))   //On success, you can display a message to user on Home page
 	    {

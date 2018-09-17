@@ -7,6 +7,10 @@ public class Login {
 	Boolean ok = false;
 	
 	String loggedMail;
+	
+	String name;
+	
+	int idCo;
 
 	public String getPwd() {
 		return pwd;
@@ -30,6 +34,22 @@ public class Login {
 
 	public void setLoggedMail(String loggedMail) {
 		this.loggedMail = loggedMail;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getIdCo() {
+		return idCo;
+	}
+
+	public void setIdCo(int idCo) {
+		this.idCo = idCo;
 	}
 	
 	

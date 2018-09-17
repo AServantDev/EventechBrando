@@ -32,7 +32,7 @@ public class UserController {
 
 			con = (Connection) CreateConnection.createConnection();
 
-			String sql = "insert into users(nom, prenom, email, mot_de_passe) values (?,?,?,?)";
+			String sql = "INSERT INTO users(nom, prenom, email, mot_de_passe) VALUES (?,?,?,?)";
 
 			preparedStatement = con.prepareStatement(sql); // Making use of prepared statements here to insert bunch
 															// of data
@@ -85,7 +85,7 @@ public class UserController {
 			st2 = con.createStatement();
 			st3 = con.createStatement();
 
-			String sql = "SELECT mot_de_passe, email FROM users WHERE email='" + session.getAttribute("mailCo")
+			String sql = "SELECT mot_de_passe, email, prenom, id_user FROM users WHERE email='" + session.getAttribute("mailCo")
 					+ "'";
 
 			result = (ResultSet) st.executeQuery(sql);
@@ -96,6 +96,9 @@ public class UserController {
 				
 				createLog.setOk(true);
 				createLog.setPwd(result.getString("mot_de_passe"));
+				createLog.setName(result.getString("prenom"));
+				createLog.setIdCo(result.getInt("id_user"));
+				
 
 			}
 
@@ -107,8 +110,10 @@ public class UserController {
 		if (createLog.getOk() == true) {
 			if ((createLog.getPwd()).equals(session.getAttribute("passwordCo"))) {
 				System.out.println("ok");
+				session.setAttribute("prenom", createLog.getName());
 				session.setAttribute("isConnected", true);
 				session.setAttribute("connect", logged);
+				session.setAttribute("idCo", createLog.getIdCo());
 				System.out.println("yes!");
 				test = "SUCCESS";
 

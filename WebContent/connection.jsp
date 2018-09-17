@@ -8,7 +8,7 @@
 <title>Page de Connexion</title>
 </head>
 <body>
-	<jsp:include page="header.html"></jsp:include>
+	<jsp:include page="header.jsp"></jsp:include>
 
 
 	<center>
@@ -38,7 +38,7 @@
 
 		<div class="row">
 			<div class="col">
-			<div>Pas encore inscrit? <a href="inscription.jsp">C'est par ici!</a></div><br>
+			<div>Pas encore inscrit? <a href="inscription.jsp">Inscription</a></div><br>
 
 				<input id="connectBtn" class="btn btn-outline-danger" type="submit"
 					value="Valider">

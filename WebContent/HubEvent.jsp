@@ -42,6 +42,7 @@
 			event.setPlaceMax(result.getInt("place_max"));
 			event.setTheme(result.getString("theme"));
 			event.setImg(result.getString("img"));
+		
 
 			eventList.add(event);
 
@@ -69,10 +70,12 @@
 </head>
 <body>
 
-	<jsp:include page="header.html"></jsp:include>
+	<jsp:include page="header.jsp"></jsp:include>
 
 	<%
 		out.print("<div id=\"container\" class=\"container bg-white\">");
+	
+	
 	
 	out.print("<div class=\"row\">");
 
@@ -112,7 +115,7 @@
 
 			out.print("<p class=\"card-text\">" + eventList.get(i).getTheme() + "</p>");
 
-			out.print("<a href=\"pageType.jsp\" class=\"btn btn-outline-danger\">Plus d'infos!</a>");
+			out.print("<a href=\"pageType.jsp?id=" + eventList.get(i).getId_event() + "\" class=\"btn btn-outline-danger\">Plus d'infos!</a>");
 
 			out.print("</div>");
 

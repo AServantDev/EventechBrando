@@ -13,5 +13,6 @@
  <b>Voir votre <a href=pageType.jsp>évenement</a></b>
  <br>
   <a href=HubEvent.jsp>Voir les évenements </a>
+  <div>Bonjour '${prenom}'</div>
 </body>
 </html><br>

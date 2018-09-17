@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<jsp:include page="header.html"></jsp:include>
+<jsp:include page="header.jsp"></jsp:include>
 
 
 <H2>Création d'évenement</H2>
@@ -19,14 +19,15 @@
 
    <form action="CreateEvent" method="post" onsubmit="return validate()">
     
-    	<table><tr> <td>Nom:</td><td><input type="text" name="nom"></td></tr>
-		<tr> <td>Lieu:</td><td><input type="text" name="lieu"></td></tr>
-		<tr> <td>Date:</td><td><input type="date" name="date"></td></tr>
-		<tr> <td>Heure de début:</td><td><input type="time" name="heure"></td></tr>
-		<tr> <td>Desc:</td><td><textarea name="description"></textarea></td></tr>
-		<tr> <td>theme:</td><td><input type="text" name="theme"></td></tr>
-		<tr> <td>place max:</td><td><input type="text" name="placeMax"></td></tr>
-		<tr> <td>Lien de votre image:</td><td><input type="text" name="imageEvent"></td></tr>
+    	<table><tr> <td>Nom:</td><td><input type="text" name="nom" required><td></tr>
+		<tr> <td>Lieu:</td><td><input type="text" name="lieu" required></td></tr>
+		<tr> <td>Date:</td><td><input type="date" name="date" required>></td></tr>
+		<tr> <td>Heure de début:</td><td><input type="time" name="heure" required></td></tr>
+		<tr> <td>Brève description:</td><td><textarea class="form-control" width = 100% name="descriptionBreve" required></textarea></td></tr>
+		<tr> <td>theme:</td><td><input type="text" name="theme" required></td></tr>
+		<tr> <td>place max:</td><td><input type="text" name="placeMax" required></td></tr>
+		<tr> <td>Image:</td><td><input type="file" name="imageEvent" required></td></tr>
+		<tr> <td>Desc:</td><td><textarea class="form-control"  name="description" required></textarea></td></tr>
 		
 		<tr><td><input type="submit" value="Submit"></td></tr>
 		</table>

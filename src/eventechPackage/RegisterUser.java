@@ -18,7 +18,7 @@ import com.mysql.jdbc.Connection;
 import eventechPackage.User;
 import eventechPackage.UserController;
 
-import sun.rmi.runtime.Log;
+import sun.rmi.runtime .Log;
 
 
 @WebServlet("/RegisterUser")
@@ -63,7 +63,7 @@ public class RegisterUser extends HttpServlet {
 
 		if (userRegistered.equals("SUCCESS")) // On success, you can display a message to user on Home page
 		{
-			request.getRequestDispatcher("/Home.jsp").forward(request, response);
+			request.getRequestDispatcher("/accueil.jsp").forward(request, response);
 
 		} 
 		else // On Failure, display a meaningful message to the User.

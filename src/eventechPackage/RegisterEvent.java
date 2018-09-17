@@ -2,6 +2,9 @@ package eventechPackage;
 
 import java.sql.PreparedStatement;
 import java.util.Date;
+
+import javax.servlet.http.HttpSession;
+
 import java.util.*;
 import java.sql.*;
 
@@ -10,7 +13,7 @@ import com.mysql.jdbc.*;
 
 public class RegisterEvent {
 
-	public String registerEvent(Evenement event) {
+	public String registerEvent(Evenement event, HttpSession session) {
 
 		String nom = event.getNom();
 		String lieu = event.getLieu();
@@ -20,6 +23,8 @@ public class RegisterEvent {
 		int place = event.getPlaceMax();
 		Time heure = event.getHeure();
 		String image = event.getImg();
+		int id = event.getId_organisateur();
+		String rapDesc = event.getDescriptionBreve();
 
 		Connection con = null;
 		PreparedStatement preparedStatement = null;
@@ -31,7 +36,7 @@ public class RegisterEvent {
 
 			con = (Connection) CreateConnection.createConnection();
 
-			String query = "insert into evenement(nom,lieu,date_evenement,description,theme,place_max,heure_debut,img) values (?,?,?,?,?,?,?,?)";
+			String query = "insert into evenement(nom,lieu,date_evenement,description,theme,place_max,heure_debut,img,id_organisateur, description_rapide) values (?,?,?,?,?,?,?,?,?,?)";
 
 			preparedStatement = con.prepareStatement(query); // Making use of prepared statements here to insert bunch
 																// of data
@@ -44,6 +49,8 @@ public class RegisterEvent {
 			preparedStatement.setInt(6, place);
 			preparedStatement.setTime(7, heure);
 			preparedStatement.setString(8, image);
+			preparedStatement.setInt(9, id);
+			preparedStatement.setString(10, rapDesc);
 			
 
 			int i = preparedStatement.executeUpdate();
