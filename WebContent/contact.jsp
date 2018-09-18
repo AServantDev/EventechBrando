@@ -50,6 +50,7 @@
 					class="btn btn-outline-danger" type="submit" value="Envoyer">
 		</form>
 		</div>
+		
 	</center>
 
 	<jsp:include page="footer.html"></jsp:include>
