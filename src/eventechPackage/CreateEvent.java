@@ -89,8 +89,15 @@ public class CreateEvent extends HttpServlet {
 	    	
 	        SimpleDateFormat format = new SimpleDateFormat("HH:mm"); // 12 hour format
 
+	        
+	        
+	        
+	        
+	        
 	        java.util.Date d1 =(java.util.Date)format.parse(heure);
 
+	        
+	        
 	        java.sql.Time ppstime = new java.sql.Time(d1.getTime());
 	        
 	        event.setHeure(ppstime);
