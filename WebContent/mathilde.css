@@ -57,6 +57,7 @@
 .sousTitre {
 	text-align: center;
 	margin-top: 30px;
+	font-family : Roboto; 
 }
 
 #carouselWrap {
@@ -134,7 +135,6 @@ transform:scale(1.1);
 
 #containerMessageEnvoye{
 min-height: 55vh;
-
 }
 
 /*!
