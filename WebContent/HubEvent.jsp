@@ -13,21 +13,21 @@
 <%@page import="java.sql.*"%>
 
 <%
-	ArrayList <Evenement> eventList = new ArrayList<Evenement>();
+	ArrayList<Evenement> eventList = new ArrayList<Evenement>();
 	Connection con = null;
 	PreparedStatement preparedStatement = null;
-	
+
 	String search = null;
 
 	try {
 		search = "";
 		Class.forName("com.mysql.jdbc.Driver");
-		
 
-		con =  CreateConnection.createConnection();
+		con = CreateConnection.createConnection();
 		search = request.getParameter("SearchName");
-		String sqlRequete = "SELECT * FROM evenement WHERE nom LIKE '%" + search + "%' OR evenement.theme LIKE '%" + search + "%'";
-		
+		String sqlRequete = "SELECT * FROM evenement WHERE nom LIKE '%" + search
+				+ "%' OR evenement.theme LIKE '%" + search + "%'";
+
 		Statement st = (Statement) con.createStatement();
 		ResultSet result = (ResultSet) st.executeQuery(sqlRequete);
 
@@ -41,7 +41,6 @@
 			event.setPlaceMax(result.getInt("place_max"));
 			event.setTheme(result.getString("theme"));
 			event.setImg(result.getString("img"));
-		
 
 			eventList.add(event);
 
@@ -60,8 +59,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet"
-	href="bootstrap.css"
+<link rel="stylesheet" href="bootstrap.css"
 	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
 	crossorigin="anonymous">
 <link rel="stylesheet" href="bootstrap.css">
@@ -73,10 +71,8 @@
 
 	<%
 		out.print("<div id=\"container\" class=\"container bg-white\">");
-	
-	
-	
-	out.print("<div class=\"row\">");
+
+		out.print("<div class=\"row\">");
 
 		out.print("<form action=\"HubEvent.jsp\" class=\"form-inline mr-5 col-sm \">");
 		out.print(
@@ -114,7 +110,8 @@
 
 			out.print("<p class=\"card-text\">" + eventList.get(i).getTheme() + "</p>");
 
-			out.print("<a href=\"pageType.jsp?id=" + eventList.get(i).getId_event() + "\" class=\"btn btn-outline-danger\">Plus d'infos!</a>");
+			out.print("<a href=\"pageType?idEvent=" + eventList.get(i).getId_event()
+					+ "\" class=\"btn btn-outline-danger\">Plus d'infos!</a>");
 
 			out.print("</div>");
 

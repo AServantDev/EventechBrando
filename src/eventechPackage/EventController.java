@@ -9,9 +9,11 @@ import java.util.*;
 import java.sql.*;
 
 import com.mysql.jdbc.Connection;
+import com.mysql.jdbc.ResultSet;
+import com.mysql.jdbc.Statement;
 import com.mysql.jdbc.*;
 
-public class RegisterEvent {
+public class EventController {
 
 	public String registerEvent(Evenement event, HttpSession session) {
 
@@ -68,4 +70,57 @@ public class RegisterEvent {
 		return "Oops.. Something went wrong there..!"; // On failure, send a message from here.
 	}
 
+	
+	public String displayEvent(Evenement event) {
+		
+		String test = "";
+		
+		
+		int idEvent = event.getId_event();
+
+		Connection con = null;
+		Statement st = null;
+		
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			
+			con = (Connection) CreateConnection.createConnection();  
+			
+			String sql = "SELECT * FROM evenement WHERE id_event = '" + idEvent +"'";
+			st = (Statement) con.createStatement();
+			
+			ResultSet result = (ResultSet) st.executeQuery(sql);
+			
+			
+			while (result.next()) {
+				
+
+				event.setNom(result.getString("nom"));
+				event.setDateEvenement(result.getDate("date_evenement"));
+				event.setLieu(result.getString("lieu"));
+				event.setDescription(result.getString("description"));
+				event.setTheme(result.getString("theme"));
+				event.setHeure(result.getTime("heure_debut"));
+				event.setPlaceMax(result.getInt("place_max"));
+				event.setImg(result.getString("img"));
+				event.setId_organisateur(result.getInt("id_organisateur"));
+				
+				
+				
+				test = "SUCCESS";
+				System.out.println("ok");
+				System.out.println(event.getNom());
+			}
+			
+			return test;
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return test;
+		
+		
+		
+				
+	}
 }
