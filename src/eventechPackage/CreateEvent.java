@@ -25,7 +25,7 @@ import com.mysql.jdbc.Connection;
 import eventechPackage.*;
 
 import eventechPackage.Evenement;
-import sun.rmi.runtime.Log;
+
 
 @WebServlet("/CreateEvent")
 public class CreateEvent extends HttpServlet {
@@ -89,8 +89,15 @@ public class CreateEvent extends HttpServlet {
 	    	
 	        SimpleDateFormat format = new SimpleDateFormat("HH:mm"); // 12 hour format
 
+	        
+	        
+	        
+	        
+	        
 	        java.util.Date d1 =(java.util.Date)format.parse(heure);
 
+	        
+	        
 	        java.sql.Time ppstime = new java.sql.Time(d1.getTime());
 	        
 	        event.setHeure(ppstime);
@@ -120,7 +127,7 @@ public class CreateEvent extends HttpServlet {
 	    
 	    
 	 
-	    RegisterEvent registerEvent = new RegisterEvent();
+	    EventController registerEvent = new EventController();
 	    
 	    //The core Logic of the Registration application is present here. We are going to insert user data in to the database.
 	    String eventRegistered = registerEvent.registerEvent(event, session);

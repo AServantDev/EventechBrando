@@ -61,18 +61,17 @@ public class UserController {
 
 		Connection con = null;
 		Statement st = null;
-		Statement st2 = null;
-		Statement st3 = null;
+		
 		String test = "";
 
 		ResultSet result = null;
-		ResultSet result2 = null;
-		ResultSet result3 = null;
+		
 
 		Login createLog = new Login();
 
 		String logged = "<p>Bienvenue ";
 		String notLogged = "<a href=\"connection.jsp\">Connectez vous</a>";
+		
 		session.setAttribute("connect", notLogged);
 		
 		try {
@@ -82,8 +81,8 @@ public class UserController {
 			con = (Connection) CreateConnection.createConnection();
 			
 			st = con.createStatement();
-			st2 = con.createStatement();
-			st3 = con.createStatement();
+			
+			
 
 			String sql = "SELECT mot_de_passe, email, prenom, id_user FROM users WHERE email='" + session.getAttribute("mailCo")
 					+ "'";

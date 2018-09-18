@@ -24,17 +24,20 @@
 					
 
 						<input id="formCt" type="text" name="mailCo" class="form-control"
-							placeholder="Email *">
+							placeholder="Email *" required>
 
 
 					</div>
 					<div class="col">
 
 						<input id="formCt" type="password" name="passwordCo"
-							class="form-control" placeholder="Mot de passe *">
+							class="form-control" placeholder="Mot de passe *" required>
 					</div>
 				</div>
 		</div>
+		
+		
+		
 
 		<div class="row">
 			<div class="col">

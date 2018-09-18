@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.apache.jasper.tagplugins.jstl.core.Out;
+
 /**
  * Servlet implementation class ConnectUser
  */
@@ -38,6 +40,7 @@ public class ConnectUser extends HttpServlet {
 			password = "";
 
 		HttpSession session = request.getSession(true);
+		
 		session.setAttribute("mailCo", mail);
 		session.setAttribute("passwordCo", password);
 		
@@ -46,7 +49,7 @@ public class ConnectUser extends HttpServlet {
 
 		String connectRegistered = connectUser.connectUser(session);
 
-		if (connectRegistered.equals("SUCCESS")) // On success, you can display a message to user on Home page
+		if (connectRegistered.equals(" SUCCESS")) // On success, you can display a message to user on Home page
 		{
 			request.getRequestDispatcher("/accueil.jsp").forward(request, response);
 			
@@ -55,6 +58,7 @@ public class ConnectUser extends HttpServlet {
 		{
 			request.setAttribute("errMessage", connectRegistered);
 			request.getRequestDispatcher("/connection.jsp").forward(request, response);
+			
 
 		}
 	}

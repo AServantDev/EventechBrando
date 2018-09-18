@@ -18,7 +18,7 @@ import com.mysql.jdbc.Connection;
 import eventechPackage.User;
 import eventechPackage.UserController;
 
-import sun.rmi.runtime .Log;
+
 
 
 @WebServlet("/RegisterUser")
@@ -40,6 +40,7 @@ public class RegisterUser extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		
 		User user = new User();
 		
 
