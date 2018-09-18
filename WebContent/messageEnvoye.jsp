@@ -10,16 +10,13 @@
 
 	<jsp:include page="header.html"></jsp:include>
 
-	<center>
-		<div class="container">
+	<div id="containerMessageEnvoye">
 
-			<h2 class="sousTitre">Merci, votre message a bien été envoyé !</h2>
+		<h2 class="sousTitre">Merci, votre message a bien été envoyé !</h2>
+		<p class="sousTitre">Nous vous répondrons dans les plus brefs
+			délais.</p>
 
-			<p class="sousTitre">Nous vous répondrons dans les plus brefs
-				délais.</p>
-
-		</div>
-	</center>
+	</div>
 
 	<jsp:include page="footer.html"></jsp:include>
 

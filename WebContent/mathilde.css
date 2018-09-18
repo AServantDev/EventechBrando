@@ -132,7 +132,10 @@ transform:scale(1.1);
 	color: #7f4b8b;
 }
 
+#containerMessageEnvoye{
+min-height: 55vh;
 
+}
 
 /*!
 * Bootstrap v4.1.1 (https://getbootstrap.com/)
