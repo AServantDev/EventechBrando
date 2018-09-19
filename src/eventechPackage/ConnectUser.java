@@ -91,8 +91,8 @@ public class ConnectUser extends HttpServlet {
 
 		} else // On Failure, display a meaningful message to the User.
 		{
-			request.setAttribute("errMessage", connectRegistered);
-			request.getRequestDispatcher("/register.jsp").forward(request, response);
+			request.setAttribute("errMessage", "Mauvais login ou mot de passe");
+			request.getRequestDispatcher("/connection.jsp").forward(request, response);
 
 		}
 	}

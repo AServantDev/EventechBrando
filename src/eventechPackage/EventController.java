@@ -9,7 +9,7 @@ import java.util.*;
 import java.sql.*;
 
 import com.mysql.jdbc.Connection;
-import com.mysql.jdbc.ResultSet;
+import java.sql.ResultSet;
 import com.mysql.jdbc.Statement;
 import com.mysql.jdbc.*;
 

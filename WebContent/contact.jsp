@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="greg.css">
 </head>
 <body>
-	<jsp:include page="header.html"></jsp:include>
+	<jsp:include page="header.jsp"></jsp:include>
 
 	<center>
 		<div class="container">
