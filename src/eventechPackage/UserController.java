@@ -1,6 +1,7 @@
 package eventechPackage;
 
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.Time;
@@ -11,7 +12,7 @@ import javax.servlet.http.HttpSession;
 import eventechPackage.RegisterUser;
 import eventechPackage.ConnectUser;
 import com.mysql.jdbc.Connection;
-import com.mysql.jdbc.ResultSet;
+
 import eventechPackage.Login;
 
 public class UserController {
@@ -131,4 +132,56 @@ public class UserController {
 
 	}
 
-} // On failure, send a message from here.
+	
+	public String participerEvent(HttpSession session, ParticipationModel participant) {
+
+		int ourIdUser = participant.getOurIDuser();
+		
+
+
+		int ourIdEvent = participant.getOurIDevent();
+
+		
+		
+
+		PreparedStatement pst = null ;
+
+		Connection con = null;
+
+
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+
+			con = (Connection) CreateConnection.createConnection();
+
+			String sql = "INSERT INTO participants(id_event,id_user) VALUES(?,?)";
+
+			pst = con.prepareStatement(sql);
+
+			pst.setInt(1, ourIdEvent);
+			pst.setInt(2, ourIdUser);
+
+			int J = pst.executeUpdate();
+
+
+
+			if (J != 0) { // Just to ensure data has been inserted into the database
+				return "SUCCESS";
+			} else {
+				System.out.println("Please fill your information correctly...");
+			}
+
+		}
+
+
+		catch (SQLException | ClassNotFoundException e) {
+			e.printStackTrace();
+
+		}
+
+		return "Oops.. Something went wrong there..!";
+	}
+}
+
+// On failure, send a message from here.
+ // On failure, send a message from here.
