@@ -9,7 +9,6 @@
 <link rel="stylesheet" href="mathilde.css">
 <html lang="en" dir="ltr">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 </head>
 
 <body>
@@ -25,9 +24,9 @@
 			<!-- buttons -->
 			<ol class="carousel-indicators">
 				<a href="HubEvent.jsp" type="button" id="buttonSlide"
-					class="btn btn-secondary">Liste des événements</a>
+					class="btn btn-secondary">Liste des événements </a>
 				<a href="register.jsp" type="button" id="buttonSlide"
-					class="btn btn-light">Créer un événement</a>
+					class="btn btn-light">Créer un événement </a>
 
 			</ol>
 
@@ -62,7 +61,6 @@
 		class="sr-only">Next</span>
 	</a>
 	</div>
-
 	</div>
 
 	<!-- titre -->
@@ -70,7 +68,6 @@
 	<div class="container">
 		<h1 class="titre">Explorer les thèmes</h1>
 	</div>
-
 
 	<!-- liste des thèmes -->
 
@@ -104,10 +101,7 @@
 			</div>
 
 
-
 			<!-- Troisième vignette -->
-
-
 
 			<div class="col">
 				<div class="hovereffect">
@@ -117,57 +111,53 @@
 					<h5 class="sousTitre">Arts numériques</h5>
 				</div>
 			</div>
-
-
 		</div>
-		</div>
+	</div>
 
-		<div id="listeEvents" class="container">
-
-			<div class="row">
-
-
-				<div class="col">
-					<div class="hovereffect">
-						<a href="register.jsp"> <img
-							class="img-responsive d-block w-100" src="images/gaming.png"
-							alt="">
-						</a>
-						<h5 class="sousTitre">Gaming</h5>
-					</div>
+	<div id="listeEvents" class="container">
+		<div class="row">
+			<div class="col">
+				<div class="hovereffect">
+					<a href="register.jsp"> <img
+						class="img-responsive d-block w-100" src="images/gaming.png"
+						alt="">
+					</a>
+					<h5 class="sousTitre">Gaming</h5>
 				</div>
+			</div>
 
-				<div class="col">
-					<div class="hovereffect">
-						<a href="register.jsp"> <img
-							class="img-responsive d-block w-100" src="images/ecology.png"
-							alt="">
-						</a>
-						<h5 class="sousTitre">Numérique et écologie</h5>
-					</div>
+			<div class="col">
+				<div class="hovereffect">
+					<a href="register.jsp"> <img
+						class="img-responsive d-block w-100" src="images/ecology.png"
+						alt="">
+					</a>
+					<h5 class="sousTitre">Numérique et écologie</h5>
 				</div>
+			</div>
 
 
-				<div class="col">
-					<div class="hovereffect">
-						<a href="register.jsp"> <img
-							class="img-responsive d-block w-100" src="images/formation.png"
-							alt="">
-						</a>
-						<h5 class="sousTitre">Formation</h5>
-					</div>
+			<div class="col">
+				<div class="hovereffect">
+					<a href="register.jsp"> <img
+						class="img-responsive d-block w-100" src="images/formation.png"
+						alt="">
+					</a>
+					<h5 class="sousTitre">Formation</h5>
 				</div>
 			</div>
 		</div>
+	</div>
 
-		<jsp:include page="footer.html"></jsp:include>
+
+	<jsp:include page="footer.html"></jsp:include>
 
 
-		<!-- Liens vers jQuery et bootstrap.js pour création du carroussel -->
+	<!-- Liens vers jQuery et bootstrap.js pour création du carroussel -->
 
-		<script src="https://code.jquery.com/jquery-3.3.1.min.js"
-			integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-			crossorigin="anonymous"></script>
-		<script type="text/javascript" src="bootstrap.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+		crossorigin="anonymous"></script>
+	<script type="text/javascript" src="bootstrap.js"></script>
 </body>
 </html>

@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@page import="java.sql.*"%>
+
 <%
 	try {
 		String typeUser = request.getParameter("typeUser");
@@ -28,6 +29,7 @@
 		ps.setString(6,message);
 
 		int s = ps.executeUpdate();
+
 		if (s > 0) {
 %>
 <jsp:forward page="messageEnvoye.jsp"></jsp:forward>
