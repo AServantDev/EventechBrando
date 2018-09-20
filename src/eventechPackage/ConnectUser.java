@@ -82,16 +82,18 @@ public class ConnectUser extends HttpServlet {
 		UserController connectUser = new UserController();
 
 		String connectRegistered = connectUser.connectUser(session);
+		System.out.println(connectRegistered);
 
 		if (connectRegistered.equals("SUCCESS")) // On success, you can display a message to user on Home page
 		{
 			session.setAttribute("isConnected", true);
 			request.getRequestDispatcher("/accueil.jsp").forward(request, response);
-			
+			System.out.println("ouaisouiou");
 
-		} else // On Failure, display a meaningful message to the User.
+		} else if (connectRegistered.equals("miss")) // On Failure, display a meaningful message to the User.
 		{
-			request.setAttribute("errMessage", "Mauvais login ou mot de passe");
+			System.out.println("notOK");
+			request.setAttribute("errorLogin", "Mauvais login ou mot de passe");
 			request.getRequestDispatcher("/connection.jsp").forward(request, response);
 
 		}

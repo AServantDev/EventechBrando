@@ -16,7 +16,7 @@
 		<div class="container rounded">
 			<h2 id ="Connect">Connectez vous</h2><br>
 
-			<form action="ConnectUser" style="width: 500px; margin: auto;">
+			<form action="ConnectUser" method="post" style="width: 500px; margin: auto;">
 
 
 				<div class="row">
@@ -44,7 +44,7 @@
 			<div class="col">
 			<div>Pas encore inscrit? <a href="inscription.jsp">Inscription</a></div><br>
 			
-			<c:out value="${errMessage }"></c:out>
+			<c:out value="${errorLogin}"></c:out>
 
 				<input id="connectBtn" class="btn btn-outline-danger" type="submit"
 					value="Valider">

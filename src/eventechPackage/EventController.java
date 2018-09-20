@@ -27,6 +27,7 @@ public class EventController {
 		String image = event.getImg();
 		int id = event.getId_organisateur();
 		String rapDesc = event.getDescriptionBreve();
+		int placeRestante = (event.getPlaceRestante());
 
 		Connection con = null;
 		PreparedStatement preparedStatement = null;
@@ -38,7 +39,7 @@ public class EventController {
 
 			con = (Connection) CreateConnection.createConnection();
 
-			String query = "insert into evenement(nom,lieu,date_evenement,description,theme,place_max,heure_debut,img,id_organisateur, description_rapide) values (?,?,?,?,?,?,?,?,?,?)";
+			String query = "insert into evenement(nom,lieu,date_evenement,description,theme,place_max,heure_debut,img,id_organisateur, description_rapide,place_restante,nb_participant) values (?,?,?,?,?,?,?,?,?,?,?,?)";
 
 			preparedStatement = con.prepareStatement(query); // Making use of prepared statements here to insert bunch
 																// of data
@@ -53,6 +54,8 @@ public class EventController {
 			preparedStatement.setString(8, image);
 			preparedStatement.setInt(9, id);
 			preparedStatement.setString(10, rapDesc);
+			preparedStatement.setInt(11, placeRestante);
+			preparedStatement.setInt(12,  0);
 			
 
 			int i = preparedStatement.executeUpdate();
@@ -104,12 +107,16 @@ public class EventController {
 				event.setPlaceMax(result.getInt("place_max"));
 				event.setImg(result.getString("img"));
 				event.setId_organisateur(result.getInt("id_organisateur"));
+				event.setPlaceRestante(result.getInt("place_restante"));
+				event.setNbParticipant(result.getInt("nb_participant"));
 				
-				
+			
 				
 				test = "SUCCESS";
 				System.out.println("ok");
 				System.out.println(event.getNom());
+				System.out.println(event.getPlaceRestante());
+				
 			}
 			
 			return test;
