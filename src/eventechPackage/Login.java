@@ -11,6 +11,10 @@ public class Login {
 	String name;
 	
 	int idCo;
+	
+	String familyName;
+	
+	int age;
 
 	public String getPwd() {
 		return pwd;
@@ -50,6 +54,22 @@ public class Login {
 
 	public void setIdCo(int idCo) {
 		this.idCo = idCo;
+	}
+
+	public String getFamilyName() {
+		return familyName;
+	}
+
+	public void setFamilyName(String familyName) {
+		this.familyName = familyName;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
 	}
 	
 	

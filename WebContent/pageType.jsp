@@ -24,6 +24,9 @@
 		<div class="col-md-6 row-md-1">${event.lieu }</div>
 		<div class="col-md-6 row-md-2">${event.dateEvenement }</div>
 		<div class="col-md-6 row-md-3">${event.heure }</div>
+		<div class="col-md-6 row-md-3">${event.placeMax }</div>
+		<div class="col-md-6 row-md-3">Place restante: ${event.placeRestante }</div>
+		<div class="col-md-6 row-md-3">${event.nbParticipant }</div>
 
 	</div>
 
@@ -33,10 +36,10 @@
 				id="inscriptionBtn" class="btn btn-outline-danger" type="submit"
 				value="S'inscrire"></a>
 		</c:when>
-		<c:when test="${ isConnected == null}">
+		<c:when test="${ isConnected == null || isConnected == false}">
 			<a href="InscriptionEvent?idEvent=${event.id_event }"> <input
 				id="inscriptionBtn" class="btn btn-outline-danger" disabled
-				type="submit" value="S'inscrire"></a>
+				type="submit" value="Connectez vous pour vous inscrire"></a>
 		</c:when>
 	</c:choose>
 

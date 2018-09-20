@@ -123,7 +123,7 @@
 		out.print("</div>");
 
 		out.print("</div>");
-		out.print("<a href=register.jsp>Créer un evénement </a>");
+	
 	%>
 
 	<jsp:include page="footer.html"></jsp:include>

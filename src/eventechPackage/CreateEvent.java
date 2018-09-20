@@ -90,10 +90,6 @@ public class CreateEvent extends HttpServlet {
 	        SimpleDateFormat format = new SimpleDateFormat("HH:mm"); // 12 hour format
 
 	        
-	        
-	        
-	        
-	        
 	        java.util.Date d1 =(java.util.Date)format.parse(heure);
 
 	        

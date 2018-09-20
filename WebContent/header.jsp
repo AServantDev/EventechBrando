@@ -47,7 +47,7 @@
 			</div>
 		</c:when>
 
-		<c:when test="${isConnected == null }">
+		<c:when test="${isConnected == null || isConnected == false }">
 			<div class="col-md-2">
 				<a href="connection.jsp"><button type="button"
 						class="btn ConnexionButton btn-outline-primary">Se
@@ -62,7 +62,11 @@
 	<c:choose>
 
 		<c:when test="${isConnected == true }">
-			<div class="col-md-2">Bienvenue ${prenom} ${nom}</div>
+		<form action="profilType.jsp">
+			<div class="col-md-2">Bienvenue ${prenom} ${nom} </div>
+			<input id="modifBtn" class="btn btn-outline-danger" type="submit"
+					value="Voir mon profil">
+			</form>
 		</c:when>
 
 		<c:otherwise></c:otherwise>

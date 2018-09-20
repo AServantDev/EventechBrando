@@ -5,18 +5,23 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Contact</title>
+
 <link rel="stylesheet" href="mathilde.css">
 <link rel="stylesheet" href="greg.css">
+
+<!--captcha script  -->
+<script src="https://www.google.com/recaptcha/api.js"></script>
+
 </head>
 <body>
+
 	<jsp:include page="header.jsp"></jsp:include>
 
-	<center>
 		<div class="container">
 			<h2 class="sousTitre">Nous contacter</h2>
 			<br>
-
-			<form action="contactSave.jsp" style="width: 20rem; margin: auto;">
+			
+			 <form action="SendMessage"  style="width: 20rem; margin: auto" >
 
 				<div class="form-group">
 					<label for="inputState">Vous êtes :</label> <select id="inputState"
@@ -28,30 +33,34 @@
 				</div>
 
 				<input id="focusInscription" type="text" name="nom"
-					class="form-control" placeholder="Nom *" required> <br> 
-					<input
-					id="focusInscription" type="text" name="prenom"
-					class="form-control" placeholder="Prénom *"required> <br> 
-					<input
-					id="focusInscription" type="text" name="entreprise"
-					class="form-control" placeholder="Entreprise"> <br> 
-					<input
+					class="form-control" placeholder="Nom *" required> <br>
+				<input id="focusInscription" type="text" name="prenom"
+					class="form-control" placeholder="Prénom *" required> <br>
+				<input id="focusInscription" type="text" name="entreprise"
+					class="form-control" placeholder="Entreprise"> <br> <input
 					id="focusInscription" type="text" name="email" class="form-control"
 					placeholder="Email *" required> <br>
 
 				<div class="form-group">
 					<label for="exampleFormControlTextarea1"></label>
-					<textarea id="focusInscription" type="text" name="message" placeholder="Message *" required
-						class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+					<textarea id="focusInscription" type="text" name="message"
+						placeholder="Message *" required class="form-control"
+						id="exampleFormControlTextarea1" rows="5"></textarea>
 				</div>
 
 				<small id="passwordHelpInline" class="text-muted">* Champs
-					obligatoires. </small> <br> <br> <input id="inscriptionBtn"
-					class="btn btn-outline-danger" type="submit" value="Envoyer">
-		</form>
-		</div>
-	</center>
+					obligatoires. </small> <br>
 
+				<!-- captcha form -->
+					<div class="g-recaptcha"
+						data-sitekey="6LeuNQITAAAAAPGRU7dkrCPIrrR64WPvzMc7pn6Z"></div>
+					<br> <input id="inscriptionBtn" class="btn btn-outline-danger"
+						type="submit" value="Envoyer">
+						
+				<!--captcha form-->
+				</form>
+				
+		</div>
 	<jsp:include page="footer.html"></jsp:include>
 
 </body>
