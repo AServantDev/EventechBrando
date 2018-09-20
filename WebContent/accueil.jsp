@@ -67,7 +67,6 @@
 		<h1 class="titre">Explorer les thèmes</h1>
 	</div>
 
-
 	<!-- liste des thèmes -->
 
 	<div id="listeEvents" class="container">
