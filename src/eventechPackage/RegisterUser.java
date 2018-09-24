@@ -55,8 +55,6 @@ public class RegisterUser extends HttpServlet {
 		user.setEmail(mail);
 		user.setPassword(password);
 		user.setNom(nom);
-		
-		
 
 		UserController createUser = new UserController();
 

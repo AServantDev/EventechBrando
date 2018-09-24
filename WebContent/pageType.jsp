@@ -6,7 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="mathilde.css">
-<title>Insert title here</title>
+<title>Evenement</title>
 </head>
 <body>
 
@@ -25,7 +25,8 @@
 		<div class="col-md-6 row-md-2">${event.dateEvenement }</div>
 		<div class="col-md-6 row-md-3">${event.heure }</div>
 		<div class="col-md-6 row-md-3">${event.placeMax }</div>
-		<div class="col-md-6 row-md-3">Place restante: ${event.placeRestante }</div>
+		<div class="col-md-6 row-md-3">Place restante:
+			${event.placeRestante }</div>
 		<div class="col-md-6 row-md-3">${event.nbParticipant }</div>
 
 	</div>
@@ -43,5 +44,11 @@
 		</c:when>
 	</c:choose>
 
+<button><a href="InscriptionEvent?idEvent=${event.id_event }"> <input
+				id="inscriptionBtn" class="btn btn-outline-danger" disabled
+				type="submit" value="Participez à la cagnotte"></a>
+				</button>
+
+	
 </body>
 </html>

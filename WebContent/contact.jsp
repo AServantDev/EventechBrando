@@ -21,7 +21,9 @@
 			<h2 class="sousTitre">Nous contacter</h2>
 			<br>
 			
-			 <form action="SendMessage"  style="width: 20rem; margin: auto" >
+			<!--Inclure method avant action et nom servlet sans slash-->
+			
+			 <form method = "post" action="SendMessage"  style="width: 20rem; margin: auto" >
 
 				<div class="form-group">
 					<label for="inputState">Vous êtes :</label> <select id="inputState"
