@@ -10,25 +10,31 @@
 </head>
 <body>
 
-	<center>
-		<h2>BIENVENUE AU ${event.nom } ${event.id_event }</h2>
-	</center>
+<jsp:include page="header.jsp"></jsp:include>
+
 
 	</center>
 	<div class="container row wrap-header">
 
-		<div class="col-md-3">
-			<img src="${event.img }" width=130% height=auto>
+		<div class="col-lg-4 row-lg-4">
+			<img src="${event.img }" width=100% height=auto>
 		</div>
 
-		<div class="col-md-6 row-md-1">Lieu: ${event.lieu }</div>
-		<div class="col-md-6 row-md-2">Date: ${event.dateEvenement }</div>
-		<div class="col-md-6 row-md-3">Heure de début: ${event.heure }</div>
-		<div class="col-md-6 row-md-3">Places max: ${event.placeMax }</div>
-		<div class="col-md-6 row-md-3">Places restante: ${event.placeRestante }</div>
-		<div class="col-md-6 row-md-3">Nombre de participants: ${event.nbParticipant }</div>
+		<div class="col-6 row-5">
+			<div class="col row">Lieu: ${event.lieu }</div>
+			<div class="col row">Date: ${event.dateEvenement }</div>
+			<div class="col row">Heure de début: ${event.heure }</div>
+			<div class="col row">Places max: ${event.placeMax }</div>
+			<div class="col row">Places restante: ${event.placeRestante }</div>
+			<div class="col row">Nombre de participants:
+				${event.nbParticipant }</div>
+
+		</div>
+
 
 	</div>
+	
+	<div>${event.description}</div>
 
 	<c:choose>
 		<c:when test="${ isConnected == true}">
@@ -42,6 +48,9 @@
 				type="submit" value="Connectez vous pour vous inscrire"></a>
 		</c:when>
 	</c:choose>
+
+
+<jsp:include page="footer.html"></jsp:include>
 
 </body>
 </html>
