@@ -10,6 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.mysql.jdbc.Connection;
 
@@ -32,6 +33,21 @@ public class SubmitCollecte extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		/*
+		 * Récupération de l'ID de l'utilisateur
+		 */
+		HttpSession session = request.getSession();
+		int idUser= (int) session.getAttribute("idCo"); 
+		
+		
+		/*
+		 * Récupération de l'ID de l'event
+		 */
+		
+		String id= request.getParameter("idEvent");
+		int idEvent=(int) Integer.parseInt(id); 
+		
 		/*
 		 * Récupération des données saisies, envoyées en tant que paramètres de
 		 * la requête GET générée à la validation du formulaire

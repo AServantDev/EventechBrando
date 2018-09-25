@@ -6,6 +6,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="mathilde.css">
+<link rel="stylesheet" href="greg.css">
+
+
 <title>Evenement</title>
 </head>
 <body>
@@ -48,6 +51,24 @@
 				id="inscriptionBtn" class="btn btn-outline-danger" disabled
 				type="submit" value="Participez à la cagnotte"></a>
 				</button>
+				
+<br>
+<br>
+<br>			
+<div class="row">
+		<div class="col"></div>
+		<div class="col" id="containerMessageEnvoye">
+
+		<input id="inscriptionBtn" class="btn btn-outline-danger"
+					type="submit" value="Participer à la collecte">
+
+		</div>
+
+		<div class="col"></div>
+
+
+	</div>
+				
 
 </body>
 </html>

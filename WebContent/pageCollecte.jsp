@@ -23,7 +23,7 @@
 
 		<!--Inclure method avant action et nom servlet sans slash-->
 
-		<form method= "POST" action="SubmitCollecte" style= "width: 20rem; margin: auto" >
+		<form method="post" action="SubmitCollecte" style= "width: 20rem; margin: auto" >
 
 			<p class="titreBis">Choix du montant</p>
 
@@ -73,7 +73,6 @@
 					<option selected>France</option>
 				</select>
 			</div>
-
 
 			<div class="form-check">
 				<input class="form-check-input" type="checkbox" value=""

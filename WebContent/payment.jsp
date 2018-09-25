@@ -10,7 +10,6 @@
 
 	<jsp:include page="header.jsp"></jsp:include>
 
-
 	<div class="row">
 
 		<div class="col"></div>
@@ -40,7 +39,6 @@
 		</div>
 
 		<div class="col"></div>
-
 
 	</div>
 
