@@ -89,6 +89,44 @@
 }
 
 
+#validation {
+	font-size: 16px;
+	font-family: Roboto;
+}
+
+.titreBis{
+	text-align: left;
+	margin-top: 20px;
+	font-family: Roboto;
+	color: #7f4b8b; 
+	font-weight: bold; 
+	font-size: 1.3rem; 
+	
+}
+
+.pay{
+	
+	text-align : center; 
+	margin-top: 2rem; 
+	
+}
+
+#validation{
+	font-size: 0.8rem; 
+	
+}
+
+.containerAccueil {
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	padding-top: 20px; 
+	padding-bottom: 20px; 
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 50px;
+
+
 /* ----------------------------------Styles de Jean-Baptiste */
 #headerMenu  {
 	font-family: Roboto;
@@ -155,6 +193,7 @@
 
 #containerMessageEnvoye {
 	min-height: 55vh;
+	text-align : center; 
 }
 
 
@@ -748,9 +787,13 @@ pre code {
 	width: 100%;
 	padding-right: 15px;
 	padding-left: 15px;
+	padding-top: 20px; 
+	padding-bottom: 20px; 
 	margin-right: auto;
 	margin-left: auto;
 	margin-top: 50px;
+	background-color: rgba(127, 99, 139, 0.3);
+	border-radius: 20px;
 }
 
 @media ( min-width : 576px) {

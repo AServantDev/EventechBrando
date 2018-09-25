@@ -11,7 +11,6 @@
 
 <jsp:include page="header.jsp"></jsp:include>
 
-	
 
 	<center>
 		<div class="container rounded">

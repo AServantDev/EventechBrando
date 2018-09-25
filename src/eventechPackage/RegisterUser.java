@@ -19,8 +19,6 @@ import eventechPackage.User;
 import eventechPackage.UserController;
 
 
-
-
 @WebServlet("/RegisterUser")
 public class RegisterUser extends HttpServlet {
 	private static final long serialVersionUID = 63564L;
@@ -55,8 +53,6 @@ public class RegisterUser extends HttpServlet {
 		user.setEmail(mail);
 		user.setPassword(password);
 		user.setNom(nom);
-		
-		
 
 		UserController createUser = new UserController();
 
@@ -71,7 +67,6 @@ public class RegisterUser extends HttpServlet {
 		{
 			request.setAttribute("errMessage", userRegistered);
 			request.getRequestDispatcher("/register.jsp").forward(request, response);
-
 		}
 		
 		
