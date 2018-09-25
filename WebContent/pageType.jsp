@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<jsp:include page="header.jsp"></jsp:include>
+	<jsp:include page="header.jsp"></jsp:include>
 
 
 	</center>
@@ -33,7 +33,7 @@
 
 
 	</div>
-	
+
 	<div>${event.description}</div>
 
 	<c:choose>
@@ -49,8 +49,25 @@
 		</c:when>
 	</c:choose>
 
+	<br>
+	<br>
+	<br>
+	<div class="row">
+		<div class="col"></div>
+		<div class="col" id="containerMessageEnvoye">
 
-<jsp:include page="footer.html"></jsp:include>
+			<a href="pageCollecte.jsp?idEvent=${event.id_event}"><input
+				id="inscriptionBtn" class="btn btn-outline-danger"
+				value="Participer à la collecte"></a>
+
+		</div>
+
+		<div class="col"></div>
+
+	</div>
+
+
+	<jsp:include page="footer.html"></jsp:include>
 
 </body>
 </html>
