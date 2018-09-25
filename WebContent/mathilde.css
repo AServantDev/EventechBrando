@@ -116,6 +116,16 @@
 	
 }
 
+.containerAccueil {
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	padding-top: 20px; 
+	padding-bottom: 20px; 
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 50px;
+
 
 /* ----------------------------------Styles de Jean-Baptiste */
 .wrap-header {
@@ -746,9 +756,13 @@ pre code {
 	width: 100%;
 	padding-right: 15px;
 	padding-left: 15px;
+	padding-top: 20px; 
+	padding-bottom: 20px; 
 	margin-right: auto;
 	margin-left: auto;
 	margin-top: 50px;
+	background-color: rgba(127, 99, 139, 0.3);
+	border-radius: 20px;
 }
 
 @media ( min-width : 576px) {

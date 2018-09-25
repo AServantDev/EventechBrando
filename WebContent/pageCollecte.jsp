@@ -23,7 +23,7 @@
 
 		<!--Inclure method avant action et nom servlet sans slash-->
 
-		<form method="post" action="SubmitCollecte" style= "width: 20rem; margin: auto" >
+		<form method="post" action="SubmitCollecte" style= "width: 20rem; margin: auto; " >
 
 			<p class="titreBis">Choix du montant</p>
 

@@ -47,11 +47,6 @@
 		</c:when>
 	</c:choose>
 
-<button><a href="InscriptionEvent?idEvent=${event.id_event }"> <input
-				id="inscriptionBtn" class="btn btn-outline-danger" disabled
-				type="submit" value="Participez à la cagnotte"></a>
-				</button>
-				
 <br>
 <br>
 <br>			
@@ -59,16 +54,13 @@
 		<div class="col"></div>
 		<div class="col" id="containerMessageEnvoye">
 
-		<input id="inscriptionBtn" class="btn btn-outline-danger"
-					type="submit" value="Participer à la collecte">
+		<a href="pageCollecte.jsp?idEvent=${event.idEvent}"><input  id="inscriptionBtn" class="btn btn-outline-danger" value="Participer à la collecte"></a>
 
 		</div>
 
 		<div class="col"></div>
 
-
-	</div>
-				
+	</div>		
 
 </body>
 </html>
