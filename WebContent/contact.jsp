@@ -17,7 +17,7 @@
 
 	<jsp:include page="header.jsp"></jsp:include>
 
-		<div class="container">
+		<div class="colored container">
 			<h2 class="sousTitre">Nous contacter</h2>
 			<br>
 			

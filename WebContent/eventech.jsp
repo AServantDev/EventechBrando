@@ -15,7 +15,7 @@
 	<img class="container-fluid" src="images/banniere.png" alt="banniere">
 	
 
-	<div class="container">
+	<div class="colored container">
 
 		<h2 class="sousTitre">A propos d'Eventech</h2>
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut blandit

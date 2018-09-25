@@ -13,7 +13,7 @@
 
 
 	<center>
-		<div class="container rounded">
+		<div class="colored container">
 		<h2 id ="Inscrit">S'inscrire</h2><br>
 
 			<form action="RegisterUser" style="width: 500px; margin: auto;">

@@ -13,7 +13,7 @@
 
 
 	<center>
-		<div class="container rounded">
+		<div class="colored container rounded">
 			<h2 id ="Connect">Connectez vous</h2><br>
 
 			<form action="ConnectUser" method="post" style="width: 500px; margin: auto;">

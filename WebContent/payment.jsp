@@ -13,7 +13,7 @@
 	<div class="row">
 
 		<div class="col"></div>
-		<div class="col" id="containerMessageEnvoye">
+		<div class="col" id="colored containerMessageEnvoye">
 
 			<h2 class="sousTitre">Récapitulatif</h2>
 			<hr>

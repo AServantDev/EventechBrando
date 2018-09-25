@@ -10,7 +10,7 @@
 
 	<jsp:include page="header.jsp"></jsp:include>
 
-	<div id="containerMessageEnvoye">
+	<div id="colored containerMessageEnvoye">
 
 		<h2 class="sousTitre">Merci, votre message a bien été envoyé !</h2>
 		<p class="sousTitre">Nous vous répondrons dans les plus brefs
