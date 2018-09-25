@@ -3,6 +3,7 @@ package eventechPackage;
 import java.sql.PreparedStatement;
 import java.util.Date;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import java.util.*;
@@ -115,6 +116,7 @@ public class EventController {
 				test = "SUCCESS";
 				System.out.println("ok");
 				System.out.println(event.getNom());
+				System.out.println(result.getInt("place_restante"));
 				System.out.println(event.getPlaceRestante());
 				
 			}
@@ -129,5 +131,56 @@ public class EventController {
 		
 		
 				
+	}
+
+
+	public ArrayList<Evenement> displayEventByTheme(HttpServletRequest request, ArrayList<Evenement> eventByTheme, Evenement event, Evenement eventTheme) {
+		
+		String theme = event.getTheme();
+		
+		System.out.println(theme);
+		Connection con = null;
+		
+		
+		
+
+		try {
+			
+			Class.forName("com.mysql.jdbc.Driver");
+
+			con = CreateConnection.createConnection();
+			
+			String sqlRequete = "SELECT * FROM evenement WHERE theme='"+theme+"'";
+
+			Statement st = (Statement) con.createStatement();
+			ResultSet result = (ResultSet) st.executeQuery(sqlRequete);
+
+			while (result.next()) {
+				eventTheme = new Evenement();
+
+				eventTheme.setId_event(result.getInt("id_event"));
+				System.out.println(result.getInt("id_event"));
+				eventTheme.setNom(result.getString("nom"));
+				eventTheme.setLieu(result.getString("lieu"));
+				eventTheme.setDateEvenement(result.getDate("date_evenement"));
+				eventTheme.setPlaceMax(result.getInt("place_max"));
+				eventTheme.setDescription(result.getString("description"));
+				eventTheme.setDescriptionBreve(result.getString("description_rapide"));
+				eventTheme.setTheme(result.getString("theme"));
+				
+				request.setAttribute("event", eventTheme);
+				
+				eventByTheme.add(eventTheme);
+
+			}
+
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return eventByTheme;
 	}
 }

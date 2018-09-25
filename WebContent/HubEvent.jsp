@@ -62,7 +62,7 @@
 <link rel="stylesheet" href="bootstrap.css"
 	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
 	crossorigin="anonymous">
-<link rel="stylesheet" href="bootstrap.css">
+<link rel="stylesheet" href="mathilde.css">
 <title>Hub evenement</title>
 </head>
 <body>
@@ -110,8 +110,8 @@
 
 			out.print("<p class=\"card-text\">" + eventList.get(i).getTheme() + "</p>");
 
-			out.print("<a href=\"pageType?idEvent=" + eventList.get(i).getId_event()
-					+ "\" class=\"btn btn-outline-danger\">Plus d'infos!</a>");
+			out.print("<a id=\"cardBtn\" href=\"pageType?idEvent=" + eventList.get(i).getId_event()
+					+ "\" class=\"btn btn-outline-danger\">Plus d'infos...</a>");
 
 			out.print("</div>");
 
