@@ -6,6 +6,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" href="mathilde.css">
+<link rel="stylesheet" href="greg.css">
+
 <title>New event</title>
 </head>
 <body>
@@ -20,38 +23,45 @@
 
 		<div class="row">
 
-			<div class="col"></div>
-			<div class="col">
+			<div class="col-3"></div>
+			<div class="col-6">
 				<form action="CreateEvent" method="post"
 					onsubmit="return validate()">
 
 					<table>
 						<tr>
-							<td>Nom:</td>
-							<td><input type="text" name="nom" required>
-							<td>
+							<td class="margeTab">Nom :</td>
+							<td class="margeTab"><input type="text" name="nom" required>
+							</td>
 						</tr>
+
 						<tr>
-							<td>Lieu:</td>
-							<td><input type="text" name="lieu" required></td>
+							<td class="margeTab">Lieu :</td>
+							<td class="margeTab"><input type="text" name="lieu" required></td>
 						</tr>
+
 						<tr>
-							<td>Date:</td>
-							<td><input type="date" name="date" required></td>
+							<td class="margeTab">Date :</td>
+							<td class="margeTab"><input type="date" name="date" required></td>
 						</tr>
+
 						<tr>
-							<td>Heure de début:</td>
-							<td><input type="time" name="heure" required></td>
+							<td class="margeTab">Heure de début :</td>
+							<td class="margeTab"><input type="time" name="heure"
+								required></td>
 						</tr>
+
 						<tr>
-							<td>Brève description:</td>
-							<td><textarea class="form-control" id="text"
-									name="descriptionBreve" required maxlength="50"></textarea></td>
-							<td><h6 class="pull-right" id="count_message"></h6></td>
+							<td class="margeTab">Description brève :</td>
+							<td class="margeTab"><textarea class="form-control"
+									id="text" name="descriptionBreve" required maxlength="50"></textarea></td>
+							<td class="margeTab"><h6 class="pull-right"
+									id="count_message"></h6></td>
 						</tr>
+
 						<tr>
-							<td>Theme:</td>
-							<td><select name="theme" required>
+							<td class="margeTab">Thème :</td>
+							<td class="margeTab"><select name="theme" required>
 									<option value="Hackathon">Hackathon</option>
 									<option value="Conference">Conférence</option>
 									<option value="Arts Numerique">Arts Numériques</option>
@@ -62,44 +72,34 @@
 							</select></td>
 						</tr>
 						<tr>
-							<td>Place max:</td>
-							<td><input type="text" name="placeMax" required></td>
+							<td class="margeTab">Nombre de places :</td>
+							<td class="margeTab"><input type="text" name="placeMax"
+								required></td>
 						</tr>
 
 
 						<tr>
-							<td>Image:</td>
-							<td><input type="file" name="imageEvent" required></td>
+							<td class="margeTab">Image :</td>
+							<td class="margeTab"><input type="file" name="imageEvent"
+								required></td>
 						</tr>
 						<tr>
-							<td>Description:</td>
-							<td><textarea class="form-control" name="description"
-									required></textarea></td>
-						</tr>
-
-						<tr>
-							<td><input type="submit" value="Submit"></td>
+							<td class="margeTab">Description complète :</td>
+							<td class="margeTab"><textarea class="form-control"
+									name="description" required></textarea></td>
 						</tr>
 					</table>
+					
+					<div class="centered"><input id="inscriptionBtn"
+								class="btn btn-outline-danger" type="submit" value="Envoyer"></div>
 
 				</form>
 			</div>
-			<div class="col"></div>
+			<div class="col-3"></div>
 
 		</div>
 
-
-
-
 	</div>
-
-
-
-	</div>
-
-
-
-	<HR>
 
 	<jsp:include page="footer.html"></jsp:include>
 
