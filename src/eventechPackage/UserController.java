@@ -88,55 +88,59 @@ public class UserController {
 
 			createLog.setPwd("");
 
-			while (result.next()) {
+			
+			
+				while (result.next()) {
 
-				createLog.setOk(true);
-				createLog.setPwd(result.getString("mot_de_passe"));
-				createLog.setName(result.getString("prenom"));
-				createLog.setIdCo(result.getInt("id_user"));
-				createLog.setAge(result.getInt("age"));
-				createLog.setFamilyName(result.getString("nom"));
-				System.out.println(result.getString("nom"));
+					createLog.setOk(true);
+					createLog.setPwd(result.getString("mot_de_passe"));
+					createLog.setName(result.getString("prenom"));
+					createLog.setIdCo(result.getInt("id_user"));
+					createLog.setAge(result.getInt("age"));
+					createLog.setFamilyName(result.getString("nom"));
+					System.out.println(result.getString("nom"));
 
-			}
+				}
+			
 
-		} catch (ClassNotFoundException | SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		}catch(ClassNotFoundException|
+
+	SQLException e)
+	{
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+
+	if(createLog.getOk()==true)
+	{
+		if ((createLog.getPwd()).equals(session.getAttribute("passwordCo"))) {
+			System.out.println("ok");
+			session.setAttribute("prenom", createLog.getName());
+			session.setAttribute("isConnected", true);
+			session.setAttribute("connect", logged);
+			session.setAttribute("idCo", createLog.getIdCo());
+			session.setAttribute("Fnom", createLog.getFamilyName());
+			session.setAttribute("age", createLog.getAge());
+			session.setAttribute("password", createLog.getPwd());
+			System.out.println("yes!");
+			test = "SUCCESS";
+
+		} else {
+
+			session.setAttribute("isConnected", false);
+			session.setAttribute("connect", notLogged);
+			System.out.println("no!");
+			test = "miss";
+
 		}
 
-		if (createLog.getOk() == true) {
-			if ((createLog.getPwd()).equals(session.getAttribute("passwordCo"))) {
-				System.out.println("ok");
-				session.setAttribute("prenom", createLog.getName());
-				session.setAttribute("isConnected", true);
-				session.setAttribute("connect", logged);
-				session.setAttribute("idCo", createLog.getIdCo());
-				session.setAttribute("Fnom", createLog.getFamilyName());
-				session.setAttribute("age", createLog.getAge());
-				session.setAttribute("password", createLog.getPwd());
-				System.out.println("yes!");
-				test = "SUCCESS";
-
-			} else {
-
-				session.setAttribute("isConnected", false);
-				session.setAttribute("connect", notLogged);
-				System.out.println("no!");
-				test = "miss";
-
-			}
-
-		}
-		System.out.println("okokokok");
-		System.out.println(test);
-		return test;
+	}System.out.println("okokokok");
+	System.out.println(test);
+	return test;
 
 	}
 
 	public String participerEvent(HttpSession session, ParticipationModel participant) {
-
-
 
 		Evenement event = new Evenement();
 
@@ -159,8 +163,8 @@ public class UserController {
 			// Requete pour récupérer les infos propre à IdEvent
 			String sql0 = "SELECT * FROM evenement WHERE id_event ='" + ourIdEvent + "'";
 			String sql1 = "INSERT INTO participants(id_event,id_user,email_user,nom_event) VALUES(?,?,?,?)";
-			String sql2 = "UPDATE evenement SET nb_participant = nb_participant + 1, place_restante=place_restante-1 WHERE id_event ='" + ourIdEvent
-					+ "'";
+			String sql2 = "UPDATE evenement SET nb_participant = nb_participant + 1, place_restante=place_restante-1 WHERE id_event ='"
+					+ ourIdEvent + "'";
 
 			st = con.createStatement();
 
@@ -261,6 +265,53 @@ public class UserController {
 
 	}
 
+	public String modifUser(User user, HttpSession session) {
+
+		String prenom = user.getPrenom();
+		String nom = user.getNom();
+		String pass = user.getPassword();
+		int age = user.getAge();
+		String email = user.getEmail();
+
+		int id = user.getId_user();
+
+		Connection con = null;
+		PreparedStatement pst = null;
+
+		try {
+
+			System.out.println("okbite");
+			Class.forName("com.mysql.jdbc.Driver");
+
+			con = (Connection) CreateConnection.createConnection();
+
+			String sql0 = "UPDATE users SET nom='" + nom + "', prenom ='" + prenom + "', mot_de_passe ='" + pass
+					+ "', email='" + email + "', age='" + age + "' WHERE id_user ='" + id + "'";
+
+			pst = con.prepareStatement(sql0);
+
+			int i = pst.executeUpdate();
+
+			if (i != 0) { // Just to ensure data has been inserted into the database
+
+				session.setAttribute("Fnom", nom);
+				session.setAttribute("prenom", prenom);
+				session.setAttribute("mailCo", email);
+				session.setAttribute("passwordCo", pass);
+				session.setAttribute("age", age);
+
+				return "SUCCESS";
+
+			} else {
+				System.out.println("Something went wrong...");
+			}
+		} catch (SQLException | ClassNotFoundException e) {
+			e.printStackTrace();
+
+		}
+		return "else";
+
+	}
 }
 
 // On failure, send a message from here.

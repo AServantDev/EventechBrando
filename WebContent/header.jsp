@@ -15,17 +15,20 @@
 <body id="headerBar">
 
 
+	<center><div class="col-md-3">
 
-
-	<header class="container "> <nav class="row wrap-header">
-
-	<div class="col-md-3">
 		<img src="images/logorong.png" id="image-logo"> <a href="#"
 			id="logo">EVENTECH</a>
-	</div>
+	</div></center>
+
+
+	<header class="container "> <nav class="row wrap-header"
+		id="headerMenu">
+
+
 
 	<div class="col-md-2">
-		<a href="accueil.jsp">Home</a>
+		<a href="accueil.jsp">Accueil</a>
 	</div>
 
 	<div class="col-md-2">
@@ -41,31 +44,24 @@
 
 		<c:when test="${isConnected == true }">
 			<div class="col-md-2">
-				<a href="deco.jsp"><button type="button"
-						class="btn DeconnexionButton btn-outline-primary">Se
-						déconnecter</button></a>
+				<a href="deco.jsp">Se déconnecter</a>
 			</div>
 		</c:when>
 
 		<c:when test="${isConnected == null || isConnected == false }">
 			<div class="col-md-2">
-				<a href="connection.jsp"><button type="button"
-						class="btn ConnexionButton btn-outline-primary">Se
-						connecter</button></a>
+				<a href="connection.jsp">Connexion/Inscription</a>
 			</div>
 		</c:when>
 
 		<c:otherwise></c:otherwise>
 
-	</c:choose> 
-	
-	<c:choose>
+	</c:choose> <c:choose>
 
 		<c:when test="${isConnected == true }">
-		<form action="profilType.jsp">
-			<div class="col-md-2">Bienvenue ${prenom} ${nom} </div>
-			<input id="modifBtn" class="btn btn-outline-danger" type="submit"
-					value="Voir mon profil">
+			
+				<div class="col-md-2">Bienvenue<a href="profilType.jsp"> ${prenom}</a></div>
+				
 			</form>
 		</c:when>
 

@@ -80,7 +80,7 @@
 
 			<div class="col">
 				<div class="hovereffect">
-					<a href="register.jsp"> <img
+					<a href="DisplayEvent?Theme=Hackathon"> <img
 						class="img-responsive d-block w-100" src="images/code.png" alt="">
 					</a>
 					<h5 class="sousTitre">Hackathons</h5>
@@ -92,7 +92,7 @@
 
 			<div class="col">
 				<div class="hovereffect">
-					<a href="register.jsp"> <img
+					<a href="DisplayEvent?Theme=Conference" method="get"> <img
 						class="img-responsive d-block w-100"
 						src="images/conferences-2.png" alt="">
 					</a>
@@ -105,7 +105,7 @@
 
 			<div class="col">
 				<div class="hovereffect">
-					<a href="register.jsp"> <img
+					<a href="DisplayEvent?Theme=Arts Numerique"> <img
 						class="img-responsive d-block w-100" src="images/art.png" alt="">
 					</a>
 					<h5 class="sousTitre">Arts numériques</h5>
@@ -118,7 +118,7 @@
 		<div class="row">
 			<div class="col">
 				<div class="hovereffect">
-					<a href="register.jsp"> <img
+					<a href="DisplayEvent?Theme=Gaming"> <img
 						class="img-responsive d-block w-100" src="images/gaming.png"
 						alt="">
 					</a>
@@ -128,7 +128,7 @@
 
 			<div class="col">
 				<div class="hovereffect">
-					<a href="register.jsp"> <img
+					<a href="DisplayEvent?Theme=Numerique et ecologie"> <img
 						class="img-responsive d-block w-100" src="images/ecology.png"
 						alt="">
 					</a>
@@ -139,11 +139,11 @@
 
 			<div class="col">
 				<div class="hovereffect">
-					<a href="register.jsp"> <img
+					<a href="DisplayEvent?Theme=Formation"> <img
 						class="img-responsive d-block w-100" src="images/formation.png"
 						alt="">
 					</a>
-					<h5 class="sousTitre">Formation</h5>
+					<h5 class="sousTitre">Formations</h5>
 				</div>
 			</div>
 		</div>

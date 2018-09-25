@@ -6,10 +6,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="mathilde.css">
-<link rel="stylesheet" href="greg.css">
 
+<title>${event.nom }</title>
 
-<title>Evenement</title>
 </head>
 <body>
 
@@ -30,13 +29,14 @@
 			<img src="${event.img }" width=130% height=auto>
 		</div>
 
-		<div class="col-md-6 row-md-1">${event.lieu }</div>
-		<div class="col-md-6 row-md-2">${event.dateEvenement }</div>
-		<div class="col-md-6 row-md-3">${event.heure }</div>
-		<div class="col-md-6 row-md-3">${event.placeMax }</div>
-		<div class="col-md-6 row-md-3">Place restante:
-			${event.placeRestante }</div>
-		<div class="col-md-6 row-md-3">${event.nbParticipant }</div>
+
+		<div class="col-md-6 row-md-1">Lieu: ${event.lieu }</div>
+		<div class="col-md-6 row-md-2">Date: ${event.dateEvenement }</div>
+		<div class="col-md-6 row-md-3">Heure de début: ${event.heure }</div>
+		<div class="col-md-6 row-md-3">Places max: ${event.placeMax }</div>
+		<div class="col-md-6 row-md-3">Places restante: ${event.placeRestante }</div>
+		<div class="col-md-6 row-md-3">Nombre de participants: ${event.nbParticipant }</div>
+
 
 	</div>
 
