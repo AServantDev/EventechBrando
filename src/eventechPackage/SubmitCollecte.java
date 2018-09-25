@@ -49,7 +49,6 @@ public class SubmitCollecte extends HttpServlet {
 		String ville = request.getParameter( "ville" ); 
 		String pays = request.getParameter( "pays" );
 
-
 		/*
 		 * Création du bean contact et initialisation avec les données récupérées
 		 */
@@ -95,7 +94,7 @@ public class SubmitCollecte extends HttpServlet {
 			int s = ps.executeUpdate();
 
 			if (s > 0) {
-				this.getServletContext().getRequestDispatcher( "/merciCollecte.jsp" ).forward(request, response );
+				this.getServletContext().getRequestDispatcher("/payment.jsp").forward(request, response );
 			} else {
 				System.out.print("Votre requête est incomplète. Merci de réitérer.");
 			}
@@ -104,7 +103,5 @@ public class SubmitCollecte extends HttpServlet {
 			e.printStackTrace();
 			System.out.print("Votre requête est incomplète. Merci de réitérer."); 
 		}
-
 	}
-
 }

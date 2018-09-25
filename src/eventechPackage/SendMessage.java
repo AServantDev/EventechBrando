@@ -1,5 +1,6 @@
 package eventechPackage;
 import java.io.IOException;
+
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import javax.servlet.ServletException;
@@ -26,7 +27,6 @@ public class SendMessage extends HttpServlet {
 		// TODO Auto-generated constructor stub
 	}
 
-
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
@@ -36,7 +36,6 @@ public class SendMessage extends HttpServlet {
 		 * la requête GET générée à la validation du formulaire
 		 */
 
-		
 		String typeUser = request.getParameter( "typeUser" );
 		String nom = request.getParameter( "nom" );
 		String prenom = request.getParameter( "prenom" );
@@ -64,7 +63,6 @@ public class SendMessage extends HttpServlet {
 			String user = "root";
 			String pwd = "SimplonMYSQL34";
 		
-
 			Connection con = (Connection) DriverManager.getConnection(url, user, pwd);
 
 			PreparedStatement ps = con.prepareStatement("insert into Eventech.contact values(?,?,?,?,?,?)");

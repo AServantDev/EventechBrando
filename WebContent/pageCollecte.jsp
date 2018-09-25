@@ -23,8 +23,7 @@
 
 		<!--Inclure method avant action et nom servlet sans slash-->
 
-		<form method="post" action="SubmitCollecte" style="width: 20rem; margin: auto">
-
+		<form method= "POST" action="SubmitCollecte" style= "width: 20rem; margin: auto" >
 
 			<p class="titreBis">Choix du montant</p>
 
@@ -53,15 +52,12 @@
 			<input id="focusInscription" type="text" name="entreprise"
 				class="form-control" placeholder="Entreprise"> <br> <input
 				id="focusInscription" type="text" name="email" class="form-control"
-				placeholder="Email *" required> <br> 
-				
-
-				<input
+				placeholder="Email *" required> <br> <input
 				id="focusInscription" type="text" name="naissance"
-				class="form-control" placeholder="Date de naissance DD/MM/YYYY *" required>
-			<br> <input id="focusInscription" type="text" name="rue"
-				class="form-control" placeholder="N° et rue *" required> <br>
-			<input id="focusInscription" type="text" name="codePostal"
+				class="form-control" placeholder="Date de naissance DD/MM/YYYY *"
+				required> <br> <input id="focusInscription" type="text"
+				name="rue" class="form-control" placeholder="N° et rue *" required>
+			<br> <input id="focusInscription" type="text" name="codePostal"
 				class="form-control" placeholder="Code postal *" required> <br>
 			<input id="focusInscription" type="text" name="ville"
 				class="form-control" placeholder="Ville *" required> <br>
@@ -92,8 +88,9 @@
 
 			<div class="pay">
 
-				<br><br> <input id="inscriptionBtn"
-					class="btn btn-outline-danger" type="submit" value="Envoyer">
+				<br>
+				<br> <input id="inscriptionBtn" class="btn btn-outline-danger"
+					type="submit" value="Envoyer">
 
 			</div>
 

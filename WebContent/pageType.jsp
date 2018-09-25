@@ -49,6 +49,5 @@
 				type="submit" value="Participez à la cagnotte"></a>
 				</button>
 
-	
 </body>
 </html>
