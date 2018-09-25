@@ -44,18 +44,18 @@
 						<td><h6 class="pull-right" id="count_message"></h6></td>
 			</tr>
 			<tr>
-				<td>theme:</td>
+				<td>Theme:</td>
 				<td><select name="theme"  required>
-					<option value="Hackaton">Hackaton</option>
-					<option value="Conférences">Conférences</option>
-					<option value="Arts Numérique">Art Numérique</option>
+					<option value="Hackathon">Hackathon</option>
+					<option value="Conference">Conférence</option>
+					<option value="Arts Numerique">Arts Numériques</option>
 					<option value="Gaming">Gaming</option>
-					<option value="Numérique et écologie">Numérique et écologie</option>
+					<option value="Numerique et ecologie">Numérique et écologie</option>
 					<option value="Formation">Formation</option> 
 					</select></td>
 			</tr>
 			<tr>
-				<td>place max:</td>
+				<td>Place max:</td>
 				<td><input type="text" name="placeMax" required></td>
 			</tr>
 
@@ -65,7 +65,7 @@
 				<td><input type="file" name="imageEvent" required></td>
 			</tr>
 			<tr>
-				<td>Desc:</td>
+				<td>Description:</td>
 				<td><textarea class="form-control" name="description" required></textarea></td>
 			</tr>
 

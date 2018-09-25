@@ -127,7 +127,7 @@ public class Evenement {
 		return placeRestante;
 	}
 	public void setPlaceRestante(int placeRestante) {
-		this.placeRestante = placeMax - nbParticipant;
+		this.placeRestante = placeRestante;
 	}
 	public int getPlaceMax() {
 		return placeMax;

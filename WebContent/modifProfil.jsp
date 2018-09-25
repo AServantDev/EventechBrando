@@ -10,7 +10,7 @@
 
 	<jsp:include page="header.jsp"></jsp:include>
 
-	<form action="modifProfil">
+	<form action="modifProfil" method="post">
 
 		<div>
 			Nom: <input id="focusInscription" type="text" name="nom"
@@ -18,14 +18,26 @@
 		</div>
 
 		<div>
-			Prénom: <input id="focusInscription" type="text" name="nom"
+			Prénom: <input id="focusInscription" type="text" name="prenom"
 				class="form-control" value="${prenom}" class="validity" required>
+		</div>
+		
+		<div>
+			Age: <input id="focusInscription" type="text" name="age"
+				class="form-control" value="${age}" class="validity" required>
 		</div>
 
 		<div>
-			mail: <input id="focusInscription" type="text" name="nom"
+			mail: <input id="focusInscription" type="text" name="mail"
 				class="form-control" value="${mailCo}" class="validity" required>
 		</div>
+		
+		<div>
+			Mot de passe: <input id="focusInscription" type="password" name="pass"
+				class="form-control" value="${password}" class="validity" required>
+		
+		<input class="btn ConnexionButton btn-outline-primary" type="submit"
+					value="Valider">Modifier mes infos</input>
 
 	</form>
 	

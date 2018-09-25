@@ -115,6 +115,7 @@ public class CreateEvent extends HttpServlet {
 	    event.setImg(image);
 	    event.setId_organisateur(id);
 	    event.setDescriptionBreve(rapDesc);
+	    event.setPlaceRestante(places);
 	   
 	   
 	    
