@@ -6,7 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="mathilde.css">
-<title>Page de l'événement ${event.nom }</title>
+<title>Insert title here</title>
 </head>
 <body>
 
