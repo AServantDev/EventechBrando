@@ -16,9 +16,12 @@ import com.mysql.jdbc.Connection;
 import eventechPackage.Login;
 
 public class UserController {
+	
+	//method de la fonctionnalité "Inscription utilisateur" avec en argument le model User 
 
 	public String registerUser(User user) {
-
+		
+		//récupération des attributs du model stockés dans des variables
 		String prenom = user.getPrenom();
 		String nom = user.getNom();
 		String mail = user.getEmail();
@@ -132,17 +135,24 @@ public class UserController {
 
 	}
 
-	
+	//Method de la fonctionnalité "Inscrire un user à un event
+	//Arguments la session + le model de la fonctionnalité
 	public String participerEvent(HttpSession session, ParticipationModel participant) {
+		
+		Evenement event = new Evenement();
 
+		//variables pour stocker les attributs du model
 		int ourIdUser = participant.getOurIDuser();
-		
-
-
 		int ourIdEvent = participant.getOurIDevent();
-
+		String mailUser = participant.getEmailUser();
 		
 		
+		
+		
+	
+	
+		
+		Statement st = null ;
 
 		PreparedStatement pst = null ;
 
@@ -153,13 +163,65 @@ public class UserController {
 			Class.forName("com.mysql.jdbc.Driver");
 
 			con = (Connection) CreateConnection.createConnection();
-
-			String sql = "INSERT INTO participants(id_event,id_user) VALUES(?,?)";
-
-			pst = con.prepareStatement(sql);
+			
+			
+			
+			//Requete pour récupérer les infos propre à IdEvent
+			String sql0 = "SELECT * FROM evenement WHERE id_event ='" + ourIdEvent + "'";
+			String sql1 = "INSERT INTO participants(id_event,id_user,email_user,nom_event) VALUES(?,?,?,?)";
+			String sql2 = "UPDATE evenement SET nb_participant = nb_participant + 1 WHERE id_event ='" + ourIdEvent + "'";
+			
+			
+			
+			
+			
+			st = con.createStatement();
+			
+			
+			
+			ResultSet result = (ResultSet) st.executeQuery(sql0);
+			while(result.next()) {
+				System.out.println("balayageBDD");
+				
+				//Récupération des infos de l'event (nom) grace au select et à la boucle while avec le result
+				participant.setNomEvent(result.getString("nom"));
+				System.out.println(result.getString("nom"));
+				event.setPlaceMax(result.getInt("place_max"));
+				event.setNbParticipant(result.getInt("nb_participant"));
+			}
+			
+			//Variable pour y stocker le nom de l'event en l'occurence
+			String eventName = participant.getNomEvent();
+			
+			//Participants 
+			
+			pst = con.prepareStatement(sql2);
+			
+			
+			int o = pst.executeUpdate();
+			if(o != 0) {
+			System.out.println("InscriptionParticipant worked");
+			} else {
+				System.out.println("nothing");
+			}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			//Deuxième requete sql, une insertion ( PreparedStatement )
+			pst = con.prepareStatement(sql1);
 
 			pst.setInt(1, ourIdEvent);
 			pst.setInt(2, ourIdUser);
+			pst.setString(3, mailUser);
+			pst.setString(4, eventName);
 
 			int J = pst.executeUpdate();
 
@@ -181,7 +243,90 @@ public class UserController {
 
 		return "Oops.. Something went wrong there..!";
 	}
+	
+	
+	public String participationCagnotte (HttpSession session, ParticipationCagnotteModel cagnotte) {
+		Evenement event = new Evenement();
+		
+		int userID = cagnotte.getIdUser();
+		int eventID = cagnotte.getIdEvent();
+		
+		String nomUser = cagnotte.getNomUser();
+		
+		
+		String userMail = cagnotte.getMailUser();
+		int don = cagnotte.getValeurDon();
+		
+		
+		Statement st = null;
+		
+		PreparedStatement pst = null;
+		
+		Connection con = null;
+		
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			
+			con = (Connection) CreateConnection.createConnection();
+			
+			String sql1 = "SELECT * FROM evenement WHERE id_event ='" +eventID +"'";
+			String sql2 = "INSERT INTO participantCagnotte(id_user,id_event,nom_event,nom_user,mail_user,valeur_don) VALUES(?,?,?,?,?,?)";
+			String sql3 = "UPDATE evenement SET montant_cagnotte = montant_cagnotte + '" + don + "' WHERE id_event ='"+eventID+"'";
+			
+			
+			st = con.createStatement();
+			
+			ResultSet result = (ResultSet) st.executeQuery(sql1);
+			while(result.next()) {
+				System.out.println("balayageBDD pour la cagnotte");
+				
+				//Récupération des infos de l'event (nom) grace au select et à la boucle while avec le result
+				
+				cagnotte.setNomEvent(result.getString("nom"));
+				event.setMontantCagnotte(result.getInt("montant_cagnotte"));
+			}
+			
+			String nomEvent = cagnotte.getNomEvent();
+			
+			
+			pst = con.prepareStatement(sql3);
+			
+			int o = pst.executeUpdate();
+			if(o != 0) {
+			System.out.println("Cagnotte update");
+			} else {
+				System.out.println("nothing");
+			}
+			
+			
+			pst = con.prepareStatement(sql2);
+			
+			
+			pst.setInt(1, userID);
+			pst.setInt(2, eventID);
+			pst.setString(3, nomEvent);
+			pst.setString(4, nomUser);
+			pst.setString(5, userMail);
+			pst.setInt(6, don);
+			
+			
+			int J = pst.executeUpdate();
+			
+			if (J != 0) { // Just to ensure data has been inserted into the database
+				return "SUCCESS";
+			} else {
+				System.out.println("Please fill your information correctly...");
+			}
+		} 
+		
+		catch (SQLException | ClassNotFoundException e) {
+			e.printStackTrace();
+
+		}
+
+		return "Oops.. Something went wrong there..!";
+		
+}
 }
 
 // On failure, send a message from here.
- // On failure, send a message from here.

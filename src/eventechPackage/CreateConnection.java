@@ -8,9 +8,9 @@ public class CreateConnection {
 
 	public static Connection createConnection() {
 		Connection con = null;
-		String url = "jdbc:mysql://localhost:3306/Eventech"; // MySQL URL followed by the database name
-		String username = "root"; // MySQL username
-		String password = "simplonco"; // MySQL password
+		String url ="jdbc:mysql://localhost:3306/Eventech"; // MySQL URL followed by the database name
+		String username ="root"; // MySQL username
+		String password ="root"; // MySQL password
 
 		try {
 			try {

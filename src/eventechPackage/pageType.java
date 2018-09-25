@@ -29,12 +29,14 @@ public class pageType extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
+		//récupération de l'idEvent
 		String id = request.getParameter("idEvent");
 		System.out.println(id);
 		int idE = Integer.parseInt(id);
 		Evenement event = new Evenement();
 		event.setId_event(idE);
 
+		//Instanciation du controller pour récupérer la method
 		EventController afficheEvent = new EventController();
 		
 

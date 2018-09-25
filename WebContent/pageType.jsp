@@ -6,7 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="mathilde.css">
-<title>Insert title here</title>
+<title>Page de l'événement ${event.nom }</title>
 </head>
 <body>
 
@@ -39,6 +39,20 @@
 				type="submit" value="S'inscrire"></a>
 		</c:when>
 	</c:choose>
+
+
+
+
+	<div>
+		<h1>Vous allez participer à la cagnotte de l'événement : ${event.nom } ${event.id_event }</h1>
+
+
+		<form action="CagnotteServlet?idEvent=${event.id_event}" method="post">
+			<input type="text" name="champsDon" placeholder="votre don">
+			<input type="submit" value="valider">
+
+		</form>
+	</div>
 
 </body>
 </html>

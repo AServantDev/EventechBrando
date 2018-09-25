@@ -16,7 +16,7 @@ import com.mysql.jdbc.*;
 public class EventController {
 
 	public String registerEvent(Evenement event, HttpSession session) {
-
+		//récupération des attributs du model
 		String nom = event.getNom();
 		String lieu = event.getLieu();
 		Date date = event.getDateEvenement();
@@ -27,7 +27,8 @@ public class EventController {
 		String image = event.getImg();
 		int id = event.getId_organisateur();
 		String rapDesc = event.getDescriptionBreve();
-
+		
+		
 		Connection con = null;
 		PreparedStatement preparedStatement = null;
 
@@ -75,7 +76,7 @@ public class EventController {
 		
 		String test = "";
 		
-		
+		//Pour le display des événements il y aura seulement besoin de l'id pour la requête SQL
 		int idEvent = event.getId_event();
 
 		Connection con = null;
@@ -94,7 +95,7 @@ public class EventController {
 			
 			while (result.next()) {
 				
-
+				//setters des attributs du model 
 				event.setNom(result.getString("nom"));
 				event.setDateEvenement(result.getDate("date_evenement"));
 				event.setLieu(result.getString("lieu"));
@@ -108,8 +109,8 @@ public class EventController {
 				
 				
 				test = "SUCCESS";
-				System.out.println("ok");
-				System.out.println(event.getNom());
+				/*System.out.println("ok");
+				System.out.println(event.getNom());*/
 			}
 			
 			return test;

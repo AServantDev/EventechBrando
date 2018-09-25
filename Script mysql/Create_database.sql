@@ -1,4 +1,3 @@
-CREATE DATABASE Eventech;
 USE Eventech;
-SELECT * FROM evenement;
-SELECT * FROM users;
+UPDATE evenement SET nb_participant = nb_participant + 1 WHERE id_event = 2 ;
+
