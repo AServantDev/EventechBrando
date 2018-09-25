@@ -134,7 +134,7 @@ public class EventController {
 	}
 
 
-	public ArrayList<Evenement> displayEventByTheme(HttpServletRequest request, ArrayList<Evenement> eventByTheme, Evenement event, Evenement eventTheme) {
+	public ArrayList<Evenement> displayEventByTheme(ArrayList<Evenement> eventByTheme, Evenement event, Evenement eventTheme) {
 		
 		String theme = event.getTheme();
 		
@@ -168,7 +168,7 @@ public class EventController {
 				eventTheme.setDescriptionBreve(result.getString("description_rapide"));
 				eventTheme.setTheme(result.getString("theme"));
 				
-				request.setAttribute("event", eventTheme);
+				
 				
 				eventByTheme.add(eventTheme);
 

@@ -37,7 +37,7 @@ public class DisplayEvent extends HttpServlet {
 		Evenement eventByTheme = new Evenement();
 		
 		ArrayList<Evenement> eventTheme = new ArrayList<Evenement>();
-		displayTheme.displayEventByTheme(request, eventTheme, event, eventByTheme);
+		displayTheme.displayEventByTheme(eventTheme, event, eventByTheme);
 		request.setAttribute("eventList", eventTheme);
 		
 		
