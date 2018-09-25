@@ -13,7 +13,7 @@
 	<jsp:include page="header.jsp"></jsp:include>
 
 
-	</center>
+	
 	<div class="container row wrap-header">
 
 		<div class="col-lg-4 row-lg-4">
