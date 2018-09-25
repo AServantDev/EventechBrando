@@ -17,6 +17,12 @@
 		<h2>BIENVENUE AU ${event.nom } ${event.id_event }</h2>
 	</center>
 
+
+
+
+
+
+
 	</center>
 	<div class="container row wrap-header">
 
@@ -46,6 +52,12 @@
 				type="submit" value="Connectez vous pour vous inscrire"></a>
 		</c:when>
 	</c:choose>
+
+
+
+
+
+
 
 <br>
 <br>
