@@ -5,6 +5,8 @@ package eventechPackage;
 import java.io.IOException;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -34,25 +36,31 @@ public class SubmitCollecte extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+
 		/*
 		 * Récupération de l'ID de l'utilisateur
 		 */
 		HttpSession session = request.getSession();
 		int idUser= (int) session.getAttribute("idCo"); 
-		
-		
+
+
 		/*
 		 * Récupération de l'ID de l'event
 		 */
-		
+
 		String id= request.getParameter("idEvent");
 		int idEvent=(int) Integer.parseInt(id); 
-		
+
 		/*
 		 * Récupération des données saisies, envoyées en tant que paramètres de
 		 * la requête GET générée à la validation du formulaire
 		 */
+
+		
+		//date
+		String dateNaissance = request.getParameter("naissance");
+		Date castJavaDateEvenement;
+		
 
 		String sMontant = request.getParameter( "montant" );
 		int montant = Integer.parseInt(sMontant);
@@ -61,7 +69,6 @@ public class SubmitCollecte extends HttpServlet {
 		String prenom = request.getParameter( "prenom" );
 		String entreprise = request.getParameter( "entreprise" );
 		String email = request.getParameter( "email" );
-		String dateNaissance = request.getParameter( "naissance" );
 		String rue = request.getParameter( "rue" );
 		String codePostal= request.getParameter( "codePostal" );
 		String ville = request.getParameter( "ville" ); 
@@ -97,6 +104,13 @@ public class SubmitCollecte extends HttpServlet {
 
 			PreparedStatement ps = con.prepareStatement("insert into Eventech.collecte values(?,?,?,?,?,?,?,?,?,?,?,?,?)");
 
+			
+			castJavaDateEvenement = new SimpleDateFormat("yyyy-MM-dd").parse(dateNaissance);
+			java.sql.Date castSqlDateEvenement= new java.sql.Date(castJavaDateEvenement.getTime());
+			collecte.setDateNaissance(castSqlDateEvenement);
+	    	
+			
+			
 			ps.setInt(1,idUser);
 			ps.setInt(2, 1);
 			ps.setInt(3,montant);

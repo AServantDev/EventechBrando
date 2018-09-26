@@ -123,11 +123,18 @@
 }
 
 .centered{
-	
 	text-align:center; 
 }
 
-
+.imageCentered{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:2rem;
+    margin-bottom:auto;
+    width:90%; 
+    height:auto ;
+}
 
 
 /* ----------------------------------Styles de Jean-Baptiste */
@@ -3055,6 +3062,7 @@ px
 }
 
 .btn {
+	margin : 10px; 
 	display: inline-block;
 	font-weight: 400;
 	text-align: center;
