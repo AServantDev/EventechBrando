@@ -35,9 +35,10 @@
 		<div>
 			Mot de passe: <input id="focusInscription" type="password" name="pass"
 				class="form-control" value="${password}" class="validity" required>
+				</div><br>
 		
 		<input class="btn ConnexionButton btn-outline-primary" type="submit"
-					value="Valider">Modifier mes infos</input>
+					value="Valider"></input>
 
 	</form>
 	
