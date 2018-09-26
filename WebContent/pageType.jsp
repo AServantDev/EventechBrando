@@ -29,12 +29,14 @@
 					${event.nbParticipant }</div>
 				<div class="col row">Description : ${event.description}</div>
 			</div>
+      
 		</div>
 	</div>
-
+  
 	<div class="row">
 		<div class="col"></div>
 		<div class="centered col">
+
 			<c:choose>
 				<c:when test="${ isConnected == true}">
 					<a href="InscriptionEvent?idEvent=${event.id_event }"> <input
@@ -48,12 +50,14 @@
 				</c:when>
 			</c:choose>
 
+
 			<div class="centered col" id="colored containerMessageEnvoye">
 
 				<a href="pageCollecte.jsp?idEvent=${event.id_event}"><input
 					id="inscriptionBtn" class="btn btn-outline-danger"
 					value="Participer à la collecte" type="submit"></a>
 			</div>
+
 		</div>
 		<div class="col"></div>
 	</div>

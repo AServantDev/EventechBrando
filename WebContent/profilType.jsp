@@ -5,6 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mathilde.css">
 <title>Profil</title>
 </head>
 <body>
@@ -16,11 +17,6 @@
 	<div>Age: ${age}</div>
 	<div>mail: ${mailCo}</div>
 	<div>Password: ${password}</div>
-
-	<c:choose>
-		<c:when test="${prenom == 'Dio' }"><img alt="" src="https://steamuserimages-a.akamaihd.net/ugc/865111917380159024/6FBBE48A6CA7CAD010DF38D09C56F22333C114F2/"></c:when>
-		<c:otherwise></c:otherwise>
-	</c:choose>
 
 	<a href="modifProfil.jsp"><button type="button"
 			class="btn ConnexionButton btn-outline-primary">Modifier mes
