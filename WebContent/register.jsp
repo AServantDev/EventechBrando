@@ -31,29 +31,29 @@
 					<table>
 						<tr>
 							<td class="margeTab">Nom :</td>
-							<td class="margeTab"><input type="text" name="nom" required>
+							<td class="margeTab"><input id="formCt" class="form-control" type="text" name="nom" required>
 							</td>
 						</tr>
 
 						<tr>
 							<td class="margeTab">Lieu :</td>
-							<td class="margeTab"><input type="text" name="lieu" required></td>
+							<td class="margeTab"><input id="formCt" class="form-control" type="text" name="lieu" required></td>
 						</tr>
 
 						<tr>
 							<td class="margeTab">Date :</td>
-							<td class="margeTab"><input type="date" name="date" required></td>
+							<td class="margeTab"><input id="formCt" class="form-control" type="date" name="date" required></td>
 						</tr>
 
 						<tr>
 							<td class="margeTab">Heure de début :</td>
-							<td class="margeTab"><input type="time" name="heure"
+							<td class="margeTab"><input id="formCt" class="form-control" type="time" name="heure"
 								required></td>
 						</tr>
 
 						<tr>
 							<td class="margeTab">Description brève :</td>
-							<td class="margeTab"><textarea class="form-control"
+							<td class="margeTab"><textarea id="formCt" class="form-control"
 									id="text" name="descriptionBreve" required maxlength="50"></textarea></td>
 							<td class="margeTab"><h6 class="pull-right"
 									id="count_message"></h6></td>
@@ -61,7 +61,7 @@
 
 						<tr>
 							<td class="margeTab">Thème :</td>
-							<td class="margeTab"><select name="theme" required>
+							<td class="margeTab"><select id="formCt" class="form-control" name="theme" required>
 									<option value="Hackathon">Hackathon</option>
 									<option value="Conference">Conférence</option>
 									<option value="Arts Numerique">Arts Numériques</option>
@@ -73,19 +73,19 @@
 						</tr>
 						<tr>
 							<td class="margeTab">Nombre de places :</td>
-							<td class="margeTab"><input type="text" name="placeMax"
+							<td class="margeTab"><input id="formCt" class="form-control" type="text" name="placeMax"
 								required></td>
 						</tr>
 
 
 						<tr>
 							<td class="margeTab">Image :</td>
-							<td class="margeTab"><input type="file" name="imageEvent"
+							<td class="margeTab"><input id="formCt" class="form-control" type="file" name="imageEvent"
 								required></td>
 						</tr>
 						<tr>
 							<td class="margeTab">Description complète :</td>
-							<td class="margeTab"><textarea class="form-control"
+							<td class="margeTab"><textarea id="formCt" class="form-control"
 									name="description" required></textarea></td>
 						</tr>
 					</table>

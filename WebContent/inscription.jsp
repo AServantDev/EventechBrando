@@ -14,7 +14,8 @@
 
 	<center>
 		<div class="colored container">
-		<h2 id ="Inscrit">S'inscrire</h2><br>
+
+		<h2 class="sousTitre">S'inscrire</h2><br>
 
 			<form action="RegisterUser" style="width: 500px; margin: auto;">
 

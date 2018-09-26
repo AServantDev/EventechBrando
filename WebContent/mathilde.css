@@ -56,6 +56,7 @@
 	margin-top: 30px;
 	font-family: Roboto;
 	margin-bottom: 3rem;
+	color:#7f4b8b; 
 }
 
 #carouselWrap {
@@ -126,6 +127,7 @@
 	text-align:center; 
 
 }
+
 
 /* ----------------------------------Styles de Jean-Baptiste */
 #headerMenu {
