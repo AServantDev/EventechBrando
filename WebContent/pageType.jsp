@@ -13,7 +13,7 @@
 	<jsp:include page="header.jsp"></jsp:include>
 
 
-	
+
 	<div class="colored container row wrap-header">
 
 		<div class="col-lg-4 row-lg-4">
@@ -36,25 +36,29 @@
 
 	<div>${event.description}</div>
 
-	<c:choose>
-		<c:when test="${ isConnected == true}">
-			<a href="InscriptionEvent?idEvent=${event.id_event }"> <input
-				id="inscriptionBtn" class="btn btn-outline-danger" type="submit"
-				value="S'inscrire"></a>
-		</c:when>
-		<c:when test="${ isConnected == null || isConnected == false}">
-			<a href="InscriptionEvent?idEvent=${event.id_event }"> <input
-				id="inscriptionBtn" class="btn btn-outline-danger" disabled
-				type="submit" value="Connectez vous pour vous inscrire"></a>
-		</c:when>
-	</c:choose>
+
 
 	<br>
 	<br>
 	<br>
 	<div class="row">
-		<div class="col"></div>
-		<div class="col" id="colored containerMessageEnvoye">
+		<div class="row-1 col-2 ">
+			<c:choose>
+				<c:when test="${ isConnected == true}">
+					<a href="InscriptionEvent?idEvent=${event.id_event }"> <input
+						id="inscriptionBtn" class="btn btn-outline-danger" type="submit"
+						value="S'inscrire"></a>
+				</c:when>
+				<c:when test="${ isConnected == null || isConnected == false}">
+					<a href="InscriptionEvent?idEvent=${event.id_event }"> <input
+						id="inscriptionBtn" class="btn btn-outline-danger" disabled
+						type="submit" value="Connectez vous pour vous inscrire"></a>
+				</c:when>
+			</c:choose>
+		</div>
+
+		
+		<div class="col row" id="colored containerMessageEnvoye">
 
 			<a href="pageCollecte.jsp?idEvent=${event.id_event}"><input
 				id="inscriptionBtn" class="btn btn-outline-danger"
