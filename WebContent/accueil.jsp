@@ -7,28 +7,17 @@
 <meta charset="utf-8">
 <title>Accueil</title>
 <link rel="stylesheet" href="mathilde.css">
+<link rel="stylesheet" href="greg.css">
 <html lang="en" dir="ltr">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
-
 	<jsp:include page="header.jsp"></jsp:include>
 
-
-
 	<div id="carouselWrap">
-		<div id="carouselExampleControls" class="carousel slide"
-			data-ride="carousel">
+		<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
 
-			<!-- buttons -->
-			<ol class="carousel-indicators">
-				<a href="HubEvent.jsp" type="button" id="buttonSlide"
-					class="btn btn-secondary">Liste des événements </a>
-				<a href="register.jsp" type="button" id="buttonSlide"
-					class="btn btn-light">Créer un événement </a>
-
-			</ol>
 
 			<!-- Wrapper for slides -->
 			<div class="carousel-inner">
@@ -41,6 +30,8 @@
 					<img class="d-block w-100" src="images/art.png" alt="Second slide">
 
 				</div>
+
+
 				<div class="carousel-item">
 					<img class="d-block w-100" src="images/code.png" alt="Third slide">
 				</div>
@@ -48,6 +39,7 @@
 
 		</div>
 	</div>
+
 
 	<!-- Left and right controls -->
 	<a class="carousel-control-prev" href="#carouselExampleControls"
@@ -60,8 +52,6 @@
 		class="carousel-control-next-icon" aria-hidden="true"></span> <span
 		class="sr-only">Next</span>
 	</a>
-	</div>
-	</div>
 
 	<!-- titre -->
 
@@ -149,9 +139,7 @@
 		</div>
 	</div>
 
-
 	<jsp:include page="footer.html"></jsp:include>
-
 
 	<!-- Liens vers jQuery et bootstrap.js pour création du carroussel -->
 

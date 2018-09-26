@@ -10,12 +10,9 @@
 <title>${event.nom }</title>
 </head>
 <body>
-
 	<jsp:include page="header.jsp"></jsp:include>
 
-
 	<div class="colored container">
-
 
 		<div class="row">
 			<div class="col">
@@ -34,7 +31,6 @@
 			</div>
 		</div>
 	</div>
-
 
 	<div class="row">
 		<div class="col"></div>

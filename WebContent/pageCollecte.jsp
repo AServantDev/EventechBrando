@@ -72,8 +72,9 @@
 				id="focusInscription" type="text" name="email" class="form-control"
 				placeholder="Email *" required> <br> 
 				
-				<input type="text"
-				id="datepicker" class="form-control" name="naissance" placeholder="Date de naissance *"
+				<input
+				id="focusInscription" type="text" name="naissance"
+				class="form-control" placeholder="Date de naissance DD/MM/YYYY *"
 				required> <br>
 				
 				

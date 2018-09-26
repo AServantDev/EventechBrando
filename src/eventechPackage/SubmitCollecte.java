@@ -56,12 +56,6 @@ public class SubmitCollecte extends HttpServlet {
 		 * la requête GET générée à la validation du formulaire
 		 */
 
-		
-		//date
-		String dateNaissance = request.getParameter("naissance");
-		Date castJavaDateEvenement;
-		
-
 		String sMontant = request.getParameter( "montant" );
 		int montant = Integer.parseInt(sMontant);
 		String typeUser = request.getParameter( "typeUser" );
@@ -69,6 +63,7 @@ public class SubmitCollecte extends HttpServlet {
 		String prenom = request.getParameter( "prenom" );
 		String entreprise = request.getParameter( "entreprise" );
 		String email = request.getParameter( "email" );
+		String dateNaissance = request.getParameter( "dateNaissance" );
 		String rue = request.getParameter( "rue" );
 		String codePostal= request.getParameter( "codePostal" );
 		String ville = request.getParameter( "ville" ); 
@@ -104,12 +99,6 @@ public class SubmitCollecte extends HttpServlet {
 
 			PreparedStatement ps = con.prepareStatement("insert into Eventech.collecte values(?,?,?,?,?,?,?,?,?,?,?,?,?)");
 
-			
-			castJavaDateEvenement = new SimpleDateFormat("yyyy-MM-dd").parse(dateNaissance);
-			java.sql.Date castSqlDateEvenement= new java.sql.Date(castJavaDateEvenement.getTime());
-			collecte.setDateNaissance(castSqlDateEvenement);
-	    	
-			
 			
 			ps.setInt(1,idUser);
 			ps.setInt(2, 1);
