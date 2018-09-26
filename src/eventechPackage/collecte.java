@@ -2,7 +2,9 @@ package eventechPackage;
 
 public class collecte {
 	
-	String montant;
+	int idEvent; 
+	int idUser;
+	int montant;
 	String typeUser;
 	String nom;
 	String prenom;
@@ -14,10 +16,23 @@ public class collecte {
 	String ville;
 	String pays;
 	
-	public String getMontant() {
+	
+	public int getIdEvent() {
+		return idEvent;
+	}
+	public void setIdEvent(int idEvent) {
+		this.idEvent = idEvent;
+	}
+	public int getIdUser() {
+		return idUser;
+	}
+	public void setIdUser(int idUser) {
+		this.idUser = idUser;
+	}
+	public int getMontant() {
 		return montant;
 	}
-	public void setMontant(String montant) {
+	public void setMontant(int montant) {
 		this.montant = montant;
 	}
 	public String getTypeUser() {

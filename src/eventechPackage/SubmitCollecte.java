@@ -1,9 +1,12 @@
 package eventechPackage;
 
 
+
 import java.io.IOException;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -33,27 +36,28 @@ public class SubmitCollecte extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+
 		/*
 		 * Récupération de l'ID de l'utilisateur
 		 */
 		HttpSession session = request.getSession();
 		int idUser= (int) session.getAttribute("idCo"); 
-		
-		
+
+
 		/*
 		 * Récupération de l'ID de l'event
 		 */
-		
+
 		String id= request.getParameter("idEvent");
 		int idEvent=(int) Integer.parseInt(id); 
-		
+
 		/*
 		 * Récupération des données saisies, envoyées en tant que paramètres de
 		 * la requête GET générée à la validation du formulaire
 		 */
 
-		String montant = request.getParameter( "montant" );
+		String sMontant = request.getParameter( "montant" );
+		int montant = Integer.parseInt(sMontant);
 		String typeUser = request.getParameter( "typeUser" );
 		String nom = request.getParameter( "nom" );
 		String prenom = request.getParameter( "prenom" );
@@ -93,19 +97,22 @@ public class SubmitCollecte extends HttpServlet {
 
 			Connection con = (Connection) DriverManager.getConnection(url, user, pwd);
 
-			PreparedStatement ps = con.prepareStatement("insert into Eventech.collecte values(?,?,?,?,?,?,?,?,?,?,?)");
+			PreparedStatement ps = con.prepareStatement("insert into Eventech.collecte values(?,?,?,?,?,?,?,?,?,?,?,?,?)");
 
-			ps.setString(1,montant);
-			ps.setString(2,typeUser);
-			ps.setString(3,nom);
-			ps.setString(4,prenom);
-			ps.setString(5,entreprise);
-			ps.setString(6,email);
-			ps.setString(7,dateNaissance);
-			ps.setString(8,rue);
-			ps.setString(9,codePostal);
-			ps.setString(10,ville);
-			ps.setString(11,pays);
+			
+			ps.setInt(1,idUser);
+			ps.setInt(2, 1);
+			ps.setInt(3,montant);
+			ps.setString(4,typeUser);
+			ps.setString(5,nom);
+			ps.setString(6,prenom);
+			ps.setString(7,entreprise);
+			ps.setString(8,email);
+			ps.setString(9,dateNaissance);
+			ps.setString(10,rue);
+			ps.setString(11,codePostal);
+			ps.setString(12,ville);
+			ps.setString(13,pays);
 
 			int s = ps.executeUpdate();
 
