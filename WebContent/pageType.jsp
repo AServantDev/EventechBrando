@@ -14,7 +14,7 @@
 
 
 	
-	<div class="container row wrap-header">
+	<div class="colored container row wrap-header">
 
 		<div class="col-lg-4 row-lg-4">
 			<img src="${event.img }" width=100% height=auto>
@@ -54,7 +54,7 @@
 	<br>
 	<div class="row">
 		<div class="col"></div>
-		<div class="col" id="containerMessageEnvoye">
+		<div class="col" id="colored containerMessageEnvoye">
 
 			<a href="pageCollecte.jsp?idEvent=${event.id_event}"><input
 				id="inscriptionBtn" class="btn btn-outline-danger"

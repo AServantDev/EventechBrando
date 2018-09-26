@@ -6,6 +6,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" href="mathilde.css">
+<link rel="stylesheet" href="greg.css">
+
 <title>New event</title>
 </head>
 <body>
@@ -13,75 +16,95 @@
 	<jsp:include page="header.jsp"></jsp:include>
 
 
-	<H2>Création d'évenement</H2>
+	<div class="colored container">
 
 
+		<h2 class="sousTitre">Création d'évenement</h2>
 
-	<form action="CreateEvent" method="post" onsubmit="return validate()">
+		<div class="row">
 
-		<table>
-			<tr>
-				<td>Nom:</td>
-				<td><input type="text" name="nom" required>
-				<td>
-			</tr>
-			<tr>
-				<td>Lieu:</td>
-				<td><input type="text" name="lieu" required></td>
-			</tr>
-			<tr>
-				<td>Date:</td>
-				<td><input type="date" name="date" required></td>
-			</tr>
-			<tr>
-				<td>Heure de début:</td>
-				<td><input type="time" name="heure" required></td>
-			</tr>
-			<tr>
-				<td>Brève description:</td>
-				<td><textarea class="form-control" id="text"
-						name="descriptionBreve" required maxlength="50"></textarea></td>
-						<td><h6 class="pull-right" id="count_message"></h6></td>
-			</tr>
-			<tr>
-				<td>Theme:</td>
-				<td><select name="theme"  required>
-					<option value="Hackathon">Hackathon</option>
-					<option value="Conference">Conférence</option>
-					<option value="Arts Numerique">Arts Numériques</option>
-					<option value="Gaming">Gaming</option>
-					<option value="Numerique et ecologie">Numérique et écologie</option>
-					<option value="Formation">Formation</option> 
-					</select></td>
-			</tr>
-			<tr>
-				<td>Place max:</td>
-				<td><input type="text" name="placeMax" required></td>
-			</tr>
+			<div class="col-3"></div>
+			<div class="col-6">
+				<form action="CreateEvent" method="post"
+					onsubmit="return validate()">
 
-			
-			<tr>
-				<td>Image:</td>
-				<td><input type="file" name="imageEvent" required></td>
-			</tr>
-			<tr>
-				<td>Description:</td>
-				<td><textarea class="form-control" name="description" required></textarea></td>
-			</tr>
+					<table>
+						<tr>
+							<td class="margeTab">Nom :</td>
+							<td class="margeTab"><input id="formCt" class="form-control" type="text" name="nom" required>
+							</td>
+						</tr>
 
-			<tr>
-				<td><input type="submit" value="Submit"></td>
-			</tr>
-		</table>
+						<tr>
+							<td class="margeTab">Lieu :</td>
+							<td class="margeTab"><input id="formCt" class="form-control" type="text" name="lieu" required></td>
+						</tr>
 
-	</form>
+						<tr>
+							<td class="margeTab">Date :</td>
+							<td class="margeTab"><input id="formCt" class="form-control" type="date" name="date" required></td>
+						</tr>
 
-	<HR>
+						<tr>
+							<td class="margeTab">Heure de début :</td>
+							<td class="margeTab"><input id="formCt" class="form-control" type="time" name="heure"
+								required></td>
+						</tr>
+
+						<tr>
+							<td class="margeTab">Description brève :</td>
+							<td class="margeTab"><textarea id="formCt" class="form-control"
+									id="text" name="descriptionBreve" required maxlength="50"></textarea></td>
+							<td class="margeTab"><h6 class="pull-right"
+									id="count_message"></h6></td>
+						</tr>
+
+						<tr>
+							<td class="margeTab">Thème :</td>
+							<td class="margeTab"><select id="formCt" class="form-control" name="theme" required>
+									<option value="Hackathon">Hackathon</option>
+									<option value="Conference">Conférence</option>
+									<option value="Arts Numerique">Arts Numériques</option>
+									<option value="Gaming">Gaming</option>
+									<option value="Numerique et ecologie">Numérique et
+										écologie</option>
+									<option value="Formation">Formation</option>
+							</select></td>
+						</tr>
+						<tr>
+							<td class="margeTab">Nombre de places :</td>
+							<td class="margeTab"><input id="formCt" class="form-control" type="text" name="placeMax"
+								required></td>
+						</tr>
+
+
+						<tr>
+							<td class="margeTab">Image :</td>
+							<td class="margeTab"><input id="formCt" class="form-control" type="file" name="imageEvent"
+								required></td>
+						</tr>
+						<tr>
+							<td class="margeTab">Description complète :</td>
+							<td class="margeTab"><textarea id="formCt" class="form-control"
+									name="description" required></textarea></td>
+						</tr>
+					</table>
+					
+					<div class="centered"><input id="inscriptionBtn"
+								class="btn btn-outline-danger" type="submit" value="Envoyer"></div>
+
+				</form>
+			</div>
+			<div class="col-3"></div>
+
+		</div>
+
+	</div>
 
 	<jsp:include page="footer.html"></jsp:include>
 
 
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
 		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 		crossorigin="anonymous"></script>
 	<script type="text/javascript" src="remain.js"></script>
