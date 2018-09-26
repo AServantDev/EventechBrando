@@ -125,7 +125,6 @@
 .centered{
 	
 	text-align:center; 
-
 }
 
 
@@ -826,6 +825,7 @@ pre code {
 	margin-right: auto;
 	margin-left: auto;
 	margin-top: 50px;
+	margin-bottom: 2rem;
 }
 
 @media ( min-width : 576px) {
