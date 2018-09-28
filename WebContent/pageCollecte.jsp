@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -31,17 +32,26 @@
 	<jsp:include page="header.jsp"></jsp:include>
 
 	<div class="colored container">
-		<h2 class="sousTitre">Participer à la collecte</h2>
-		<hr>
-		<br>
 
+		<h2 class="sousTitre">Participer à la collecte de l'événement </h2>
+
+		<br>
+		
+		
+		
+		
+		
 		<!--Inclure method avant action et nom servlet sans slash-->
+		
+		<form method="post" action="SubmitCollecte?idEvent=<%=request.getParameter("idEvent")%>" style= "width: 20rem; margin: auto; " >
+
 
 		<form method="post" action="SubmitCollecte"
 			style="width: 20rem; margin: auto;">
 			
 
 			<p class="titreBis">Choix du montant</p>
+
 
 			<input id="focusInscription" type="text" name="montant"
 				class="form-control" placeholder="Montant souhaité en €" required>

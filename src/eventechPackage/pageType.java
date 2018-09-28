@@ -6,6 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class pageType
@@ -44,6 +45,10 @@ public class pageType extends HttpServlet {
 		
 		
 		request.setAttribute("event", event);
+		
+		
+		
+		
 		
 		
 

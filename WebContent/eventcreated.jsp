@@ -4,19 +4,30 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Message envoyé</title>
+<link href="greg.css" rel="stylesheet" type="text/css">
+<title>Event Created</title>
 </head>
 <body>
 
 	<jsp:include page="header.jsp"></jsp:include>
 
-	<div id="colored containerMessageEnvoye">
-
-		<h2 class="sousTitre">Votre événement a bien été crée !</h2>
-		<p class="sousTitre">Nous vous répondrons dans les plus brefs
-			délais.</p>
+	<div id="backgroundEventCreated">
+		<h2 class="sousTitreeC">${prenom}, Votre événement ${event.nom} </h2>
+		<h2 class="sousTitreeC">A bien été crée.</h2>
+		<p class="sousTitreeC"><a href=HubEvent.jsp>Retourner à la liste des événements</a></p>
+		
+		
 
 	</div>
+	
+	
+	
+	
+	
+	 
+ 
+  
+ 
 
 	<jsp:include page="footer.html"></jsp:include>
 

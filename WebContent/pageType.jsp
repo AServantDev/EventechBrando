@@ -12,6 +12,7 @@
 <body>
 	<jsp:include page="header.jsp"></jsp:include>
 
+
 	<div class="colored container">
 
 		<div class="row">
@@ -20,6 +21,7 @@
 			</div>
 
 			<div class="col">
+        <div class="col row">Intitulé: ${event.nom}</div>
 				<div class="col row">Lieu : ${event.lieu }</div>
 				<div class="col row">Date : ${event.dateEvenement }</div>
 				<div class="col row">Heure de début : ${event.heure }</div>
@@ -31,11 +33,14 @@
 			</div>
       
 		</div>
+
 	</div>
   
 	<div class="row">
+
 		<div class="col"></div>
 		<div class="centered col">
+
 
 			<c:choose>
 				<c:when test="${ isConnected == true}">
@@ -51,7 +56,11 @@
 			</c:choose>
 
 
-			<div class="centered col" id="colored containerMessageEnvoye">
+
+      <div class="centered col" id="colored containerMessageEnvoye">
+			<a href="pageCollecte.jsp?idEvent=${event.id_event}">
+			<input id="inscriptionBtn" class="btn btn-outline-danger" type="submit" value="Participer à la collecte"></a>
+
 
 				<a href="pageCollecte.jsp?idEvent=${event.id_event}"><input
 					id="inscriptionBtn" class="btn btn-outline-danger"

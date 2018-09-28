@@ -25,6 +25,7 @@ public class UserController {
 		String password = user.getPassword();
 
 		Connection con = null;
+		System.out.println("dao registerUser");
 		PreparedStatement preparedStatement = null;
 
 		try {
@@ -59,7 +60,7 @@ public class UserController {
 	}
 
 	public String connectUser(HttpSession session) {
-
+		System.out.println("dao connectUser");
 		Connection con = null;
 		Statement st = null;
 
@@ -141,7 +142,7 @@ public class UserController {
 	}
 
 	public String participerEvent(HttpSession session, ParticipationModel participant) {
-
+		System.out.println("dao participationEvent");
 		Evenement event = new Evenement();
 
 		// variables pour stocker les attributs du model
@@ -223,7 +224,7 @@ public class UserController {
 	}
 
 	public String showProfile(User user) {
-
+		System.out.println("dao afficherProfil");
 		int id = user.getId_user();
 
 		Connection con = null;
@@ -251,7 +252,6 @@ public class UserController {
 				user.setEmail(result.getString("email"));
 				user.setPassword(result.getString("mot_de_passe"));
 				test = "SUCCESS";
-				System.out.println("okbite2");
 				return test;
 
 			}
@@ -266,7 +266,7 @@ public class UserController {
 	}
 
 	public String modifUser(User user, HttpSession session) {
-
+		System.out.println("dao modifierProfile");
 		String prenom = user.getPrenom();
 		String nom = user.getNom();
 		String pass = user.getPassword();

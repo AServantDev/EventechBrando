@@ -127,7 +127,7 @@ public class CreateEvent extends HttpServlet {
 	    
 	    if(eventRegistered.equals("SUCCESS"))   //On success, you can display a message to user on Home page
 	    {
-	    request.getRequestDispatcher("/Home.jsp").forward(request,  response);
+	    request.getRequestDispatcher("/eventcreated.jsp").forward(request,  response);
 	    
 	    }
 	    else   //On Failure, display a meaningful message to the User.

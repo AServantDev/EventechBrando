@@ -17,9 +17,11 @@
 
 			<h2 class="sousTitre">Récapitulatif</h2>
 			<hr>
-			<p class="sousTitre">Nom de l'event par nom du créateur</p>
 
-			<p class="sousTitre">Votre don : montant du don (€)</p>
+			<p class="sousTitre"> ${prenomCollecte}, </p>
+			<p class="sousTitre">Vous allez participer à la collecte de l'événement : ${nomEvent}  </p>
+			<p class="sousTitre"> pour un montant de  ${montant}(€)</p>
+			<p class="sousTitre"> Veuillez entrer vos coordonnées bancaires pour procéder au payement.  </p>
 			<hr>
 
 			<div class="row">
