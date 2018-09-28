@@ -6,12 +6,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="mathilde.css">
-<title>${event.nom }</title>
+<title>${event.nom}</title>
 </head>
 <body>
 
 	<jsp:include page="header.jsp"></jsp:include>
-
+	
 
 
 	<div class="colored container row wrap-header">
@@ -21,6 +21,7 @@
 		</div>
 
 		<div class="col-6 row-5">
+		<div class="col row">Intitulé: ${event.nom}</div>
 			<div class="col row">Lieu: ${event.lieu }</div>
 			<div class="col row">Date: ${event.dateEvenement }</div>
 			<div class="col row">Heure de début: ${event.heure }</div>
@@ -42,7 +43,7 @@
 	<br>
 	<br>
 	<div class="row">
-		<div class="row-1 col-2 ">
+		<div class="row-1 col">
 			<c:choose>
 				<c:when test="${ isConnected == true}">
 					<a href="InscriptionEvent?idEvent=${event.id_event }"> <input
@@ -60,9 +61,8 @@
 		
 		<div class="col row" id="colored containerMessageEnvoye">
 
-			<a href="pageCollecte.jsp?idEvent=${event.id_event}"><input
-				id="inscriptionBtn" class="btn btn-outline-danger"
-				value="Participer à la collecte"></a>
+			<a href="pageCollecte.jsp?idEvent=${event.id_event}">
+			<input id="inscriptionBtn" class="btn btn-outline-danger" type="submit" value="Participer à la collecte"></a>
 
 		</div>
 

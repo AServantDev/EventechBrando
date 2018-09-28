@@ -10,7 +10,5 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/CDC-1.0%Foundation-1.0"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/mysql-connector-java-5.1.47.jar"/>
-	<classpathentry kind="lib" path="/Users/mathildeargellies/Desktop/ECLIPSE/apache-tomcat-7.0.90/lib/servlet-api.jar"/>
-	<classpathentry kind="lib" path="/Users/mathildeargellies/Desktop/ECLIPSE/apache-tomcat-7.0.90/lib/tomcat-api.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

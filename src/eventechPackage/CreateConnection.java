@@ -10,7 +10,8 @@ public class CreateConnection {
 		Connection con = null;
 		String url = "jdbc:mysql://localhost:3306/Eventech"; // MySQL URL followed by the database name
 		String username = "root"; // MySQL username
-		String password = "SimplonMYSQL34"; // MySQL password
+		String password = "root"; // MySQL password
+								 //MySQL password Mathilde "SimplonMYSQL34"
 
 		try {
 			try {

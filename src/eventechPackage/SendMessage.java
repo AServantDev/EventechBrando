@@ -61,7 +61,7 @@ public class SendMessage extends HttpServlet {
 
 			String url = "jdbc:mysql://localhost:3306/Eventech";
 			String user = "root";
-			String pwd = "SimplonMYSQL34";
+			String pwd = "root";
 		
 			Connection con = (Connection) DriverManager.getConnection(url, user, pwd);
 

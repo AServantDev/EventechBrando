@@ -17,14 +17,15 @@
 
 			<h2 class="sousTitre">Récapitulatif</h2>
 			<hr>
-			<p class="sousTitre">Nom de l'event par nom du créateur</p>
-			
-			<p class="sousTitre">Votre don : montant du don (€)</p>
+			<p class="sousTitre"> ${prenomCollecte}, </p>
+			<p class="sousTitre">Vous allez participer à la collecte de l'événement : ${nomEvent}  </p>
+			<p class="sousTitre"> pour un montant de  ${montant}(€)</p>
+			<p class="sousTitre"> Veuillez entrer vos coordonnées bancaires pour procéder au payement.  </p>
 			<hr>
 
 			<!--Service stripe -->
 
-			<form action="your-server-side-code" method="POST">
+			<center><form action="your-server-side-code" method="POST">
 				<script src="https://checkout.stripe.com/checkout.js"
 					class="stripe-button" data-key="pk_test_TYooMQauvdEDq54NiTphI7jx"
 					data-amount="0" data-name="Stripe.com"
@@ -33,7 +34,7 @@
 					data-locale="auto" data-zip-code="true">
 						
 					</script>
-			</form>
+			</form></center>
 			<!--Service stripe -->
 
 		</div>
