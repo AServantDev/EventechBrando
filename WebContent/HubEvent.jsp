@@ -70,6 +70,7 @@
 	<jsp:include page="header.jsp"></jsp:include>
 
 	<%
+	
 		out.print("<div id=\"container\" class=\"container bg-white\">");
 
 		out.print("<div class=\"row\">");
@@ -77,7 +78,7 @@
 		out.print("<form action=\"HubEvent.jsp\" class=\"form-inline mr-5 col-sm \">");
 		out.print(
 				"<input name=\"SearchName\" class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"Rechercher un évenement\" aria-label=\"SearchName\">");
-		out.print("<button class=\"btn btn-outline-danger my-2 my-sm-0\" type=\"submit\">Search</button>");
+		out.print("<button  class=\"btn btn-outline-danger my-2 my-sm-0\" type=\"submit\">Search</button>");
 		out.print("</form>");
 
 		out.print("<form class=\"form-inline mr-5 col-sm \">");
@@ -127,9 +128,6 @@
 	%>
 
 	<jsp:include page="footer.html"></jsp:include>
-
-
-
 
 </body>
 </html>

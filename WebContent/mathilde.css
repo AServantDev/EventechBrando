@@ -55,7 +55,7 @@
 	text-align: center;
 	margin-top: 30px;
 	font-family: Roboto;
-	margin-bottom: 3rem;
+	margin-bottom: 1rem;
 	color:#7f4b8b; 
 }
 
@@ -123,9 +123,17 @@
 }
 
 .centered{
-	
 	text-align:center; 
+}
 
+.imageCentered{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:2rem;
+    margin-bottom:auto;
+    width:90%; 
+    height:auto ;
 }
 
 
@@ -826,6 +834,7 @@ pre code {
 	margin-right: auto;
 	margin-left: auto;
 	margin-top: 50px;
+	margin-bottom: 2rem;
 }
 
 @media ( min-width : 576px) {
@@ -3053,6 +3062,7 @@ px
 }
 
 .btn {
+	margin : 10px; 
 	display: inline-block;
 	font-weight: 400;
 	text-align: center;
@@ -3171,9 +3181,11 @@ a.btn.disabled, fieldset:disabled a.btn {
 	box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
 }
 
+
+
 .btn-secondary {
 	color: #7f4b8b;
-	background-color: #fff;
+	background-color: #ffff;
 	border-color: #7f4b8b;
 }
 
@@ -7315,6 +7327,7 @@ supports ((-webkit-transform-style: preserve-3d ) or (transform-style: preserve-
 	color: #fff;
 	text-align: center;
 	opacity: 0.5;
+	margin-top : 30rem; 
 }
 
 .carousel-control-prev:hover, .carousel-control-prev:focus,

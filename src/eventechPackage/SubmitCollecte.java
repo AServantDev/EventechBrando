@@ -1,11 +1,17 @@
 package eventechPackage;
 
 
+
 import java.io.IOException;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+
 import java.sql.ResultSet;
 import java.sql.Statement;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -41,10 +47,7 @@ public class SubmitCollecte extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		
-		
-		System.out.println("Servlet cagnotte");
+
 
 
 		/*
@@ -52,7 +55,7 @@ public class SubmitCollecte extends HttpServlet {
 		 */
 		HttpSession session = request.getSession();
 		int idUser= (int) session.getAttribute("idCo"); 
-		System.out.println(idUser);
+
 
 
 
@@ -73,11 +76,21 @@ public class SubmitCollecte extends HttpServlet {
 
 
 
+
+
+		/*
+		 * Récupération de l'ID de l'event
+		 */
+
+		String id= request.getParameter("idEvent");
+		int idEvent=(int) Integer.parseInt(id); 
+
 		/*
 		 * Récupération des données saisies, envoyées en tant que paramètres de
 		 * la requête GET générée à la validation du formulaire
 		 */
-	    String sMontant = request.getParameter("montant");
+
+		String sMontant = request.getParameter( "montant" );
 		int montant = Integer.parseInt(sMontant);
 		String typeUser = request.getParameter( "typeUser" );
 		String nom = request.getParameter( "nom" );

@@ -37,7 +37,7 @@
 		<div class="row">
 			<div class="col">
 				<div>
-					Pas encore inscrit? <a href="inscription.jsp">Inscription</a>
+					Pas encore inscrit? <a href="inscription.jsp">Inscription.</a>
 				</div>
 				<br>
 

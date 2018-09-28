@@ -69,10 +69,6 @@ public class CreateEvent extends HttpServlet {
 	  		String dateEvenement = request.getParameter("date");
 	  		Date castJavaDateEvenement;
 	  		
-			
-	  		
-	    
-	    
 	    String desc = request.getParameter("description");
 	    String theme = request.getParameter("theme");
 	    String place= request.getParameter("placeMax");
